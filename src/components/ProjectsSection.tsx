@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -6,104 +5,117 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ExternalLink, Github } from "lucide-react";
 
-// Sample projects data
 const projects = [
   {
     id: 1,
-    title: "E-commerce Mobile App",
-    description: "A full-featured e-commerce application with cart, user profiles, and payment integration.",
-    category: "android",
-    image: "https://placehold.co/600x400/e2e8f0/1e293b?text=E-commerce+App",
-    tags: ["Kotlin", "MVVM", "Room", "Retrofit"],
-    githubLink: "https://github.com/username/project1",
-    liveLink: "https://project1.com"
+    title: "Cyber-Physical Health Monitoring System (CPS)",
+    description: "Real-time health data monitoring using Spring Boot, PostgreSQL, and ESP32 via MQTT.",
+    category: "iot/cps",  
+    image: "cps_pic.png",
+    tags: ["Spring Boot", "Java", "ESP32", "PostgreSQL", "MQTT", "Kotlin"],
+    githubLink: "https://github.com/Abhinavan2004/Ensuring-Securing-in-CPS-for-Healthcare-Applications",
   },
   {
     id: 2,
-    title: "Fitness Tracker",
-    description: "Track workouts, set goals, and monitor progress with this fitness companion app.",
-    category: "android",
-    image: "https://placehold.co/600x400/e2e8f0/1e293b?text=Fitness+Tracker",
-    tags: ["Kotlin", "Jetpack Compose", "Health APIs", "Firebase"],
-    githubLink: "https://github.com/username/project2",
-    liveLink: "https://project2.com"
+    title: "Face Detection & Recognition",
+    description: "Dockerized ML model for face recognition with AWS Greengrass, MQTT, and SQS.",
+    category: "ml",
+    image: "img3.jfif",
+    tags: ["Python", "Docker", "AWS", "MQTT", "Flask"],
+    githubLink: "https://github.com/Devansh176/AWS-Face-Recognition.git",
   },
   {
     id: 3,
-    title: "Social Media Platform",
-    description: "A responsive social media platform with real-time messaging and content sharing.",
-    category: "android",
-    image: "https://placehold.co/600x400/e2e8f0/1e293b?text=Social+Media+App",
-    tags: ["Java", "Firebase", "ExoPlayer", "WorkManager"],
-    githubLink: "https://github.com/username/project3",
-    liveLink: "https://project3.com"
+    title: "Data Insights Pipeline",
+    description: "Automated metadata detection and insights with Python, AWS RDS, and LLMs.",
+    category: "cloud",
+    image: "img4.jfif",
+    tags: ["Python", "AWS", "LLM", "S3", "RDS"],
+    githubLink: "https://github.com/Devansh176/Data-Insights-Pipeline.git",
   },
   {
     id: 4,
-    title: "REST API Service",
-    description: "A high-performance REST API service with authentication and data processing capabilities.",
-    category: "backend",
-    image: "https://placehold.co/600x400/e2e8f0/1e293b?text=REST+API",
-    tags: ["Node.js", "Express", "MongoDB", "JWT"],
-    githubLink: "https://github.com/username/project4",
-    liveLink: "https://project4.com"
+    title: "Personal Finance Tracker",
+    description: "Track income, expenses, and predict SIP returns using Flutter and Spring Boot.",
+    category: "flutter",
+    image: "i5.webp",
+    tags: ["Flutter", "Dart", "Spring Boot", "Java", "REST API"],
+    githubLink: "https://github.com/Devansh176/FinancialAdvisioryFlutter.git",
   },
   {
     id: 5,
-    title: "Microservice Architecture",
-    description: "A distributed system using microservice architecture for scalable applications.",
-    category: "backend",
-    image: "https://placehold.co/600x400/e2e8f0/1e293b?text=Microservices",
-    tags: ["Spring Boot", "Docker", "Kubernetes", "Kafka"],
-    githubLink: "https://github.com/username/project5",
-    liveLink: "https://project5.com"
+    title: "Movie App (Cineflex)",
+    description: "Displays movies, trailers, and handles bookings with bilingual support.",
+    category: "flutter",
+    image: "CfxLogo.jpeg",
+    tags: ["Flutter", "TMDb API", "Razorpay", "YouTube API"],
+    githubLink: "https://github.com/Devansh176/Movies-and-Series-.git",
+    liveLink: "https://appetize.io/app/b_jvn5k744ajmjpw7evezrnewj64"
   },
   {
     id: 6,
-    title: "Weather App",
-    description: "Real-time weather forecasting application with beautiful UI and animations.",
+    title: "Wallpaper App (Wallviz)",
+    description: "High-quality image search and wallpaper downloads using Pexels & Unsplash APIs.",
     category: "flutter",
-    image: "https://placehold.co/600x400/e2e8f0/1e293b?text=Weather+App",
-    tags: ["Flutter", "Dart", "API Integration", "Animations"],
-    githubLink: "https://github.com/username/project6",
-    liveLink: "https://project6.com"
+    image: "i6.webp",
+    tags: ["Flutter", "Dart", "Pexels API", "Unsplash API"],
+    githubLink: "https://github.com/Devansh176/Wallpaper-App.git",
+    liveLink: "https://appetize.io/app/b_jidfd4hp7dmycywun77ak7hpf4"
   },
   {
     id: 7,
-    title: "Serverless Cloud Functions",
-    description: "A collection of serverless functions for automated data processing and notifications.",
-    category: "cloud",
-    image: "https://placehold.co/600x400/e2e8f0/1e293b?text=Cloud+Functions",
-    tags: ["AWS Lambda", "Firebase Functions", "Serverless"],
-    githubLink: "https://github.com/username/project7",
-    liveLink: "https://project7.com"
+    title: "Facial Expression Detection",
+    description: "Real-time emotion recognition using Flutter and TensorFlow Lite.",
+    category: "ml",
+    image: "i7.jfif",
+    tags: ["Flutter", "TensorFlow Lite", "Teachable Machine"],
+    githubLink: "https://github.com/Devansh176/Face_Expression_Detection.git",
   },
   {
     id: 8,
-    title: "Smart Home System",
-    description: "IoT-based smart home system with sensor integration and mobile control.",
-    category: "iot/cps",
-    image: "https://placehold.co/600x400/e2e8f0/1e293b?text=Smart+Home",
-    tags: ["Arduino", "Raspberry Pi", "MQTT", "Sensors"],
-    githubLink: "https://github.com/username/project8",
-    liveLink: "https://project8.com"
+    title: "User Task Management System",
+    description: "Task manager with Firebase auth and real-time CRUD.",
+    category: "flutter",
+    image: "i8.webp",
+    tags: ["Flutter", "Firebase", "Spring Boot"],
+    githubLink: "https://github.com/Devansh176/GDG_App.git",
+    liveLink: "https://appetize.io/app/b_omdfosuibokiqbyqi73ot42zaq"
   },
   {
     id: 9,
-    title: "Image Recognition System",
-    description: "Deep learning model for image classification and object detection.",
-    category: "ml",
-    image: "https://placehold.co/600x400/e2e8f0/1e293b?text=ML+Project",
-    tags: ["Python", "TensorFlow", "Computer Vision", "CNN"],
-    githubLink: "https://github.com/username/project9",
-    liveLink: "https://project9.com"
+    title: "Todo List",
+    description: "To-do app with Provider, SQLite, and due date tracking.",
+    category: "flutter",
+    image: "todo.jpg",
+    tags: ["Flutter", "Dart", "SQLite"],
+    githubLink: "https://github.com/Devansh176/TodoList.git",
+    liveLink: "https://appetize.io/app/b_fhcdhygsl37w37n4lbr545pfjq"
+  },
+  {
+    id: 10,
+    title: "QR Code Scanner",
+    description: "QR code scanner with link redirection and sharing.",
+    category: "flutter",
+    image: "qr-code.jpg",
+    tags: ["Flutter", "Dart", "QR Scanner"],
+    githubLink: "https://github.com/Devansh176/QR_CodeScanner.git",
+    liveLink: "https://appetize.io/app/b_dqcoawru7lnh6kuinjhbkpvnhe"
+  },
+  {
+    id: 11,
+    title: "Student Profile",
+    description: "Student profile app for saving and retrieving student details.",
+    category: "flutter",
+    image: "profile.png",
+    tags: ["Flutter", "Dart", "Spring Boot"],
+    githubLink: "https://github.com/Devansh176/Studentprofile",
   }
 ];
 
 const ProjectsSection = () => {
   const categories = ["all", ...new Set(projects.map(project => project.category))];
   const [activeTab, setActiveTab] = useState("all");
-  
+
   const filteredProjects = activeTab === "all" 
     ? projects 
     : projects.filter(project => project.category === activeTab);
@@ -113,24 +125,29 @@ const ProjectsSection = () => {
       <div className="section-container">
         <h2 className="section-title text-center">Projects</h2>
         <p className="text-center text-foreground/80 mb-12 max-w-3xl mx-auto">
-          Explore my projects across different technology domains. Each project showcases different skills and approaches to solving problems.
+          Explore my projects across various domains including mobile apps, cloud systems, machine learning, and IoT.
         </p>
-        
+
         <Tabs defaultValue="all" value={activeTab} onValueChange={setActiveTab} className="mb-12">
           <div className="flex justify-center">
-            <TabsList className="mb-8 bg-background/50 backdrop-blur-sm p-1 rounded-xl">
-              {categories.map((category) => (
-                <TabsTrigger 
-                  key={category} 
-                  value={category} 
-                  className="capitalize rounded-lg px-4 py-2 transition-all duration-300"
-                >
-                  {category}
-                </TabsTrigger>
-              ))}
+            <TabsList className="mb-8 bg-background/50 backdrop-blur-sm p-1 rounded-xl flex justify-center">
+            {categories.map((category) => (
+              <TabsTrigger
+                key={category}
+                value={category}
+                className={`capitalize rounded-lg px-4 py-2 transition-colors duration-500 ease-in-out
+                  ${
+                    activeTab === category
+                      ? "bg-primary/90 text-white shadow-md"
+                      : "bg-transparent text-foreground hover:bg-primary/20 hover:text-primary"
+                  }
+                `}
+              >
+                {category}
+              </TabsTrigger>
+            ))}
             </TabsList>
           </div>
-          
           {categories.map((category) => (
             <TabsContent key={category} value={category} className="mt-0">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -164,17 +181,19 @@ const ProjectsSection = () => {
                       </div>
                     </CardContent>
                     <CardFooter className="flex justify-between">
-                      <Button variant="outline" size="sm" className="flex items-center gap-2 rounded-full" asChild>
-                        <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                          <Github className="h-4 w-4" /> Code
-                        </a>
-                      </Button>
+                    <Button variant="outline" size="sm" className="flex items-center gap-2 rounded-full" asChild>
+                      <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
+                        <Github className="h-4 w-4" /> Code
+                      </a>
+                    </Button>
+                    {project.liveLink && (
                       <Button size="sm" className="flex items-center gap-2 bg-primary/90 hover:bg-primary rounded-full shadow-sm hover:shadow-md transition-all duration-300" asChild>
                         <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
                           Live Demo <ExternalLink className="h-4 w-4" />
                         </a>
                       </Button>
-                    </CardFooter>
+                    )}
+                  </CardFooter>
                   </Card>
                 ))}
               </div>

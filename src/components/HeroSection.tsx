@@ -7,11 +7,10 @@ const HeroSection = () => {
       <div className="section-container flex flex-col items-center text-center lg:text-left lg:flex-row lg:justify-between">
         <div className="lg:max-w-2xl">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-primary animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            I am Devansh
+            I am Devansh !!
           </h1>
           <p className="text-lg text-foreground/80 mb-8 max-w-2xl animate-fade-in" style={{ animationDelay: "0.4s" }}>
-            Pursuing IT at Ramdeobaba College of Engineering and Management.
-            Currently in my 3rd year and actively looking for opportunities as a fresher in software development.
+          Third-year IT student at Ramdeobaba College of Engineering and Management, building robust software solutions and actively seeking opportunities to contribute to real-world development projects, expand my technical skill set, and drive innovation in software engineering.
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center lg:justify-start animate-fade-in mb-6" style={{ animationDelay: "0.6s" }}>
@@ -20,10 +19,14 @@ const HeroSection = () => {
         </div>
 
         <div className="mt-8 lg:mt-0 flex flex-col items-center animate-fade-in" style={{ animationDelay: "0.6s" }}>
-          <Avatar className="h-48 w-48 border-4 border-primary/20 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-            <AvatarImage src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" alt="Devansh P. Dhopte" />
-            <AvatarFallback>DP</AvatarFallback>
-          </Avatar>
+        <Avatar className="h-60 w-60 border-4 border-primary/20 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 overflow-hidden">
+          <AvatarImage
+            src="ProfilePhoto.jpeg"
+            alt="Devansh P. Dhopte"
+            className="object-cover object-[50%_30%] w-full h-full"
+          />
+          <AvatarFallback>DP</AvatarFallback>
+        </Avatar>
           <h2 className="text-2xl font-bold mt-4 text-primary">Devansh P. Dhopte</h2>
         </div>
       </div>

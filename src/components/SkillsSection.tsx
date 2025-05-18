@@ -1,43 +1,77 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 const skillCategories = [
   {
+    title: "Programming Languages",
+    description: "Languages I use for development and problem solving",
+    skills: [
+      { name: "Java", level: "Advanced" },
+      { name: "Dart", level: "Intermediate" },
+      { name: "C", level: "Intermediate" },
+      { name: "Python", level: "Intermediate" },
+      { name: "Kotlin", level: "Intermediate" }
+    ]
+  },
+  {
     title: "Mobile Development",
-    description: "Technologies I use for building mobile applications",
+    description: "Tools and frameworks I use to build Android apps",
     skills: [
-      { name: "Kotlin", level: "Intermediate" },
-      { name: "Java", level: "Intermediate" },
+      { name: "Flutter", level: "Intermediate" },
       { name: "Android SDK", level: "Intermediate" },
-      { name: "Flutter", level: "Beginner" }
+      { name: "Jetpack", level: "Beginner" },
+      { name: "Teachable Machine", level: "Beginner" }
     ]
   },
   {
-    title: "Backend Development",
-    description: "Technologies I use for server-side development",
+    title: "Backend & Cloud",
+    description: "Technologies for backend systems and cloud infrastructure",
     skills: [
-      { name: "Node.js", level: "Intermediate" },
-      { name: "Express", level: "Intermediate" },
-      { name: "MongoDB", level: "Intermediate" },
-      { name: "REST APIs", level: "Intermediate" },
-      { name: "Firebase", level: "Beginner" }
+      { name: "Spring Boot", level: "Intermediate" },
+      { name: "REST APIs", level: "Advanced" },
+      { name: "Firebase", level: "Intermediate" },
+      { name: "AWS", level: "Intermediate" },
+      { name: "Docker", level: "Beginner" },
+      { name: "Google Cloud", level: "Beginner" },
+      { name: "MQTT", level: "Intermediate" },
+      { name: "CI/CD", level: "Beginner" },
+      { name: "CloudWatch", level: "Beginner" },
+      { name: "Greengrass", level: "Beginner" }
     ]
   },
   {
-    title: "Frontend Development",
-    description: "Technologies I use for client-side development",
+    title: "Databases & Tools",
+    description: "Databases and development tools I’ve worked with",
     skills: [
-      { name: "React", level: "Intermediate" },
-      { name: "TypeScript", level: "Beginner" },
-      { name: "JavaScript", level: "Intermediate" },
-      { name: "HTML/CSS", level: "Advanced" },
-      { name: "Tailwind CSS", level: "Intermediate" }
+      { name: "PostgreSQL", level: "Intermediate" },
+      { name: "MySQL", level: "Beginner" },
+      { name: "Sqflite", level: "Intermediate" },
+      { name: "SQLite", level: "Intermediate" },
+      { name: "pgAdmin", level: "Beginner" },
+      { name: "Postman", level: "Intermediate" },
+      { name: "Android Studio", level: "Advanced" },
+      { name: "IntelliJ IDEA", level: "Intermediate" },
+      { name: "GitHub", level: "Advanced" },
+      { name: "ESP32", level: "Intermediate" }
+    ]
+  },
+  {
+    title: "CS Fundamentals",
+    description: "My academic and applied computer science knowledge",
+    skills: [
+      { name: "Data Structures & Algorithms", level: "Advanced" },
+      { name: "OOP", level: "Advanced" },
+      { name: "System Design", level: "Beginner" },
+      { name: "Linux", level: "Intermediate" },
+      { name: "Operating Systems", level: "Intermediate" },
+      { name: "Computer Networks", level: "Intermediate" },
+      { name: "Machine Learning", level: "Beginner" },
+      { name: "AI", level: "Beginner" }
     ]
   },
   {
     title: "Soft Skills",
-    description: "Personal qualities and interpersonal abilities",
+    description: "Traits and qualities that define how I work with teams",
     skills: [
       { name: "Problem Solving", level: "Advanced" },
       { name: "Team Collaboration", level: "Advanced" },
@@ -55,8 +89,8 @@ const SkillsSection = () => {
     <section id="skills" className="py-20 bg-gradient-to-b from-background to-secondary/20">
       <div className="section-container">
         <h2 className="section-title text-center">Skills & Technologies</h2>
-        <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-          I'm constantly learning and improving my skills across various technologies.
+        <p className="text-center text-white-600 mb-12 max-w-3xl mx-auto">
+          Continuously building and refining my technical expertise across multiple domains.
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -64,7 +98,7 @@ const SkillsSection = () => {
             <Card 
               key={index} 
               className="overflow-hidden border border-border/50 backdrop-blur-sm bg-card/30 animate-fade-in hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
-              style={{ animationDelay: `${index * 0.15}s` }}
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardHeader className="bg-primary/5 border-b border-border/30">
                 <CardTitle>{category.title}</CardTitle>

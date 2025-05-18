@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ExternalLink, Download } from "lucide-react";
@@ -9,7 +8,7 @@ const ResumeSection = () => {
       <div className="section-container">
         <h2 className="section-title text-center">Resume</h2>
         <p className="text-center text-foreground/80 mb-12 max-w-3xl mx-auto">
-          Take a look at my complete professional profile and experience.
+          Take a look at my complete professional profile.
         </p>
         
         <div className="max-w-3xl mx-auto">
@@ -25,17 +24,8 @@ const ResumeSection = () => {
                 className="flex items-center gap-2 hover:scale-105 transition-transform duration-300 rounded-full shadow-md hover:shadow-lg" 
                 asChild
               >
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a href="https://drive.google.com/file/d/13a9vL7pbUm5EBRvwB7gYOKdvkdC2ynMY/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                   View Online <ExternalLink className="h-4 w-4" />
-                </a>
-              </Button>
-              <Button 
-                variant="outline" 
-                className="flex items-center gap-2 hover:scale-105 transition-transform duration-300 rounded-full" 
-                asChild
-              >
-                <a href="#" download>
-                  Download PDF <Download className="h-4 w-4" />
                 </a>
               </Button>
             </CardContent>
@@ -46,24 +36,23 @@ const ResumeSection = () => {
               <CardHeader className="border-b border-border/30 bg-primary/5">
                 <CardTitle className="text-center">Education</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-6 pt-6">
-                <div className="text-center">
+              <CardContent className="space-y-10 pt-10 pb-8"> {/* Increased spacing */}
+                <div className="text-center space-y-2">
                   <h4 className="text-xl font-medium">Bachelor of Engineering in Information Technology</h4>
-                  <p className="text-primary mt-1">Ramdeobaba College of Engineering and Management</p>
-                  <p className="text-sm text-muted-foreground mt-1">2021 - 2025</p>
-                  <p className="mt-3">Currently in 3rd year with focus on software development and system design.</p>
+                  <p className="text-primary">Shri Ramdeobaba College of Engineering and Management</p>
+                  <p className="text-sm text-muted-foreground">2022 - 2026</p>
                 </div>
                 
-                <div className="text-center">
+                <div className="text-center space-y-2">
                   <h4 className="text-xl font-medium">Higher Secondary Education</h4>
-                  <p className="text-primary mt-1">Shivaji Science College</p>
-                  <p className="text-sm text-muted-foreground mt-1">2019 - 2021</p>
+                  <p className="text-primary">Dharampeth Science College</p>
+                  <p className="text-sm text-muted-foreground">2020 - 2022</p>
                 </div>
                 
-                <div className="text-center">
+                <div className="text-center space-y-2">
                   <h4 className="text-xl font-medium">Secondary Education</h4>
-                  <p className="text-primary mt-1">Mount Carmel High School</p>
-                  <p className="text-sm text-muted-foreground mt-1">Completed 2019</p>
+                  <p className="text-primary">St. Xavier's High School</p>
+                  <p className="text-sm text-muted-foreground">Completed 2020</p>
                 </div>
               </CardContent>
             </Card>

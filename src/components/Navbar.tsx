@@ -10,6 +10,7 @@ const navLinks = [
   { name: "Resume", href: "#resume" },
   { name: "Projects", href: "#projects" },
   { name: "Skills", href: "#skills" },
+  {name : "Internships", href: "#internships"},
   { name: "Certificates", href: "#certificates" },
   { name: "CP Stats", href: "#cp-stats" },
 ];
@@ -50,12 +51,13 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          <a href="#home" className="flex items-center gap-2">
-            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors">
-              {/* Space for logo image */}
-              <Code className="h-6 w-6 text-primary" />
-            </div>
+          <a href="#home" className="flex items-center gap-3">
+            <img 
+              src="cartoon.jpg"
+              className="w-20 h-20 rounded-full object-cover border border-primary"
+            />
           </a>
+
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-6">
@@ -77,7 +79,7 @@ const Navbar = () => {
           {/* Social Links */}
           <div className="hidden md:flex items-center space-x-4">
             <a 
-              href="https://github.com/username"
+              href="https://github.com/Devansh176"
               target="_blank"
               rel="noopener noreferrer" 
               className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors hover:scale-110 transition-transform duration-300"
@@ -95,14 +97,15 @@ const Navbar = () => {
               <Linkedin className="h-4 w-4 text-primary" />
             </a>
             <a 
-              href="mailto:devanshdhopte@gmail.com"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=devanshdhopte@gmail.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
               className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors hover:scale-110 transition-transform duration-300"
-              aria-label="Email"
-            >
+              aria-label="Email">
               <Mail className="h-4 w-4 text-primary" />
             </a>
             <a 
-              href="https://codolio.com/devansh"
+              href="https://codolio.com/profile/Devansh176"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors hover:scale-110 transition-transform duration-300"
@@ -140,7 +143,7 @@ const Navbar = () => {
             ))}
             <div className="flex items-center space-x-4 mt-4 pt-4 border-t border-border">
               <a 
-                href="https://github.com/username"
+                href="https://github.com/devansh176"
                 target="_blank"
                 rel="noopener noreferrer" 
                 className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"

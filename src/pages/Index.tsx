@@ -9,6 +9,7 @@ import CertificatesSection from "@/components/CertificatesSection";
 import ThemeToggle from "@/components/ThemeToggle";
 import ScrollToTop from "@/components/ScrollToTop";
 import CompetitiveProgrammingSection from "@/components/CompetitiveProgrammingSection";
+import VirtualInternshipsSection from "@/components/VirtualInternshipsSection";
 
 const Index = () => {
   return (
@@ -19,6 +20,7 @@ const Index = () => {
       <ProjectsSection />
       <SkillsSection />
       <CompetitiveProgrammingSection />
+      <VirtualInternshipsSection />
       <CertificatesSection />
       <Footer />
       <ThemeToggle />

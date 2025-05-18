@@ -5,32 +5,46 @@ import { ExternalLink } from "lucide-react";
 
 const certificates = [
   {
-    name: "Introduction to Web Development",
+    name: "Introduction to Git and GitHub",
     issuer: "Coursera",
-    date: "March 2023",
-    url: "#",
-    skills: ["HTML", "CSS", "JavaScript"]
+    date: "March 2024",
+    url: "https://drive.google.com/file/d/1num9-1KIlO3PGIz7lYoQofKSVqJhh-eM/view?usp=drive_link",
+    skills: ["Git", "GitHub", "Version Control"]
   },
   {
-    name: "Advanced Android Development",
-    issuer: "Google Developer Academy",
-    date: "June 2023",
-    url: "#",
-    skills: ["Kotlin", "Android SDK", "Firebase"]
+    name: "English Communication for Tech Professionals",
+    issuer: "Coursera",
+    date: "Oct 2024",
+    url: "https://drive.google.com/file/d/1xSrE6Vm4Ct_KL9d8dRdDtNaGXEQLYEI8/view?usp=drive_link",
+    skills: ["Vocabulary", "Soft Skills", "Grammar"]
   },
   {
-    name: "Data Structures and Algorithms",
-    issuer: "HackerRank",
-    date: "January 2023",
-    url: "#",
-    skills: ["Algorithms", "Problem Solving", "Java"]
+    name: "Data Structures & Backend with Java",
+    issuer: "Coursera",
+    date: "March 2025",
+    url: "https://drive.google.com/file/d/1dqDPtXFKE0jDGFC6FDNq7dFsqhPwJoLK/view?usp=drive_link",
+    skills: ["Algorithms", "Problem Solving", "Java", "Spring Boot", "MVC", "APIs"]
   },
   {
-    name: "Full-Stack Development Bootcamp",
-    issuer: "Udemy",
-    date: "September 2023",
-    url: "#",
-    skills: ["React", "Node.js", "MongoDB"]
+    name: "Flutter and Dart: Developing iOS, Android, and Mobile Apps",
+    issuer: "Coursera",
+    date: "March 2025",
+    url: "https://drive.google.com/file/d/1p2VpOC3EEX4p2BJ427obIUNQhRjM6Gkh/view?usp=drive_link",
+    skills: ["Flutter", "Dart", "Android SDK", "APIs"]
+  },
+  {
+    name: "Networking Basics",
+    issuer: "Cisco - Networking Academy",
+    date: "Dec 2024",
+    url: "https://drive.google.com/file/d/12foMFGoUt6_hhY2SywNboU0IMhBcOkwo/view?usp=drive_link",
+    skills: ["Routing", "Switching", "IP Addressing", "Troubleshooting", "Security"]
+  },
+  {
+    name: "English for IT1",
+    issuer: "Cisco - Networking Academy",
+    date: "Dec 2024",
+    url: "https://drive.google.com/file/d/1xqsLR0n2_s3KYSrZKpmJ-DgIJhjQQFHs/view?usp=drive_link",
+    skills: ["Vocabulary", "Writing", "Speaking"]
   }
 ];
 
@@ -39,7 +53,7 @@ const CertificatesSection = () => {
     <section id="certificates" className="py-20 bg-secondary/30">
       <div className="section-container">
         <h2 className="section-title text-center">Certificates</h2>
-        <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+        <p className="text-center text-white-600 mb-12 max-w-3xl mx-auto">
           Professional certifications that validate my skills and knowledge in various areas of IT.
         </p>
         

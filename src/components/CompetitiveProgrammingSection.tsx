@@ -1,53 +1,62 @@
-
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
 
 // LeetCode problem data
 const leetcodeData = [
-  { name: 'Easy', value: 85, color: '#73c0de' },
-  { name: 'Medium', value: 42, color: '#5470c6' },
-  { name: 'Hard', value: 15, color: '#91cc75' },
+  { name: 'Easy', value: 133, color: '#73c0de' },
+  { name: 'Medium', value: 156, color: '#5470c6' },
+  { name: 'Hard', value: 11, color: '#91cc75' },
 ];
 
 // Topic distribution data
 const topicData = [
-  { name: 'Arrays', value: 45, color: '#5470c6' },
-  { name: 'Strings', value: 20, color: '#91cc75' },
-  { name: 'Dynamic Programming', value: 18, color: '#fac858' },
-  { name: 'Graphs', value: 15, color: '#ee6666' },
-  { name: 'Trees', value: 22, color: '#73c0de' },
-  { name: 'Greedy', value: 10, color: '#3ba272' },
-  { name: 'BFS/DFS', value: 12, color: '#fc8452' },
+  { name: 'Arrays', value: 133, color: '#5470c6' },
+  { name: 'Strings', value: 53, color: '#f930a4' },
+  { name: 'HashMap', value: 49, color: '#ee6666' },
+  { name: 'Database', value: 115, color: '#91cc75' },
+  { name: 'Trees', value: 27, color: '#73c0de' },
+  { name: 'Greedy', value: 28, color: '#3ba272' },
+  { name: 'BFS/DFS', value: 44, color: '#fc8452' },
+  { name: 'DP', value: 21, color: '#fac858' },
 ];
 
 // Platform stats
 const platformStats = [
-  { platform: 'LeetCode', problems: 142, rank: '15,234', rating: '1825' },
-  { platform: 'HackerRank', problems: 78, rank: '9,874', rating: '5 stars' },
-  { platform: 'CodeChef', problems: 56, rank: '12,421', rating: '1650' },
-  { platform: 'CodeForces', problems: 45, rank: '18,982', rating: '1420' },
-  { platform: 'GeeksForGeeks', problems: 68, rank: '8,542', rating: 'Expert' },
-];
-
-// SQL Skills data
-const sqlSkillsData = [
-  { skill: 'Basic Queries', level: 90 },
-  { skill: 'Joins', level: 85 },
-  { skill: 'Subqueries', level: 75 },
-  { skill: 'Aggregations', level: 80 },
-  { skill: 'Window Functions', level: 70 },
-  { skill: 'Indexing', level: 65 },
+  { platform: 'LeetCode', problems: 288, rank: '371,752', rating: '-' },
+  { platform: 'HackerRank', problems: 55, rank: '9,874', rating: '5⭐' },
+  { platform: 'CodeChef', problems: 51, rank: '7,456', rating: '1,267' },
+  { platform: 'GeeksForGeeks', problems: 13, rank: '658', rating: '-' },
+  { platform: 'CodeForces', problems: 5, rank: '12,065', rating: '382' }
 ];
 
 // Common topics to filter
 const commonTopics = [
-  "Arrays", "Strings", "DP", "Graphs", "Trees", 
-  "Greedy", "BFS/DFS", "Heap", "Stack", "Queue", 
-  "Binary Search", "Recursion", "Backtracking", "Bit Manipulation", "SQL"
+  "Arrays", "Strings", "HashMap/Set", "Sorting", "Two Pointer", "DP", "Graphs", "Trees", 
+  "Greedy", "BFS/DFS", "Stack", "Queue", "Database", "LinkedList", 
+  "Binary Search", "Recursion", "Backtracking", "Sliding Window"
 ];
+
+const RADIAN = Math.PI / 180;
+
+const renderCustomLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
+  const radius = innerRadius + (outerRadius - innerRadius) * 1.2;
+  const x = cx + radius * Math.cos(-midAngle * RADIAN);
+  const y = cy + radius * Math.sin(-midAngle * RADIAN);
+
+  return (
+    <text
+      x={x}
+      y={y}
+      fill="currentColor"
+      textAnchor={x > cx ? 'start' : 'end'}
+      dominantBaseline="central"
+      fontSize={12}
+    >
+      {`${topicData[index].name} ${(percent * 100).toFixed(0)}%`}
+    </text>
+  );
+};
 
 const CompetitiveProgrammingSection = () => {
   return (
@@ -57,81 +66,65 @@ const CompetitiveProgrammingSection = () => {
         <p className="text-center text-foreground/80 mb-12 max-w-3xl mx-auto">
           My problem-solving journey across various competitive programming platforms.
         </p>
-        
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-          <Card className="overflow-hidden border border-border/50 backdrop-blur-sm bg-card/30">
-            <CardHeader className="bg-primary/5 border-b border-border/30">
-              <CardTitle>LeetCode Statistics</CardTitle>
-              <CardDescription>Problems solved by difficulty level</CardDescription>
-            </CardHeader>
-            <CardContent className="pt-6 h-72">
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart
-                  data={leetcodeData}
-                  margin={{ top: 20, right: 30, left: 0, bottom: 5 }}
-                >
-                  <CartesianGrid strokeDasharray="3 3" stroke="#66666620" />
-                  <XAxis dataKey="name" />
-                  <YAxis />
-                  <Tooltip 
-                    contentStyle={{ 
-                      backgroundColor: 'rgba(30, 41, 59, 0.8)', 
-                      borderColor: 'rgba(148, 163, 184, 0.2)',
-                      borderRadius: '8px',
-                      color: '#fff',
-                      backdropFilter: 'blur(8px)'
-                    }} 
-                  />
-                  <Legend />
-                  <Bar dataKey="value" name="Problems Solved">
-                    {leetcodeData.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={entry.color} />
-                    ))}
-                  </Bar>
-                </BarChart>
-              </ResponsiveContainer>
-            </CardContent>
-          </Card>
-          
-          <Card className="overflow-hidden border border-border/50 backdrop-blur-sm bg-card/30">
+
+        {/* Centered Card */}
+        <div className="flex justify-center mb-12">
+          <Card className="overflow-hidden border border-border/50 backdrop-blur-sm bg-card/30 w-full max-w-2xl">
             <CardHeader className="bg-primary/5 border-b border-border/30">
               <CardTitle>Topic Distribution</CardTitle>
               <CardDescription>Problems solved by topic category</CardDescription>
             </CardHeader>
-            <CardContent className="pt-6 h-72">
-              <ResponsiveContainer width="100%" height="100%">
-                <PieChart>
-                  <Pie
-                    data={topicData}
-                    cx="50%"
-                    cy="50%"
-                    labelLine={false}
-                    outerRadius={80}
-                    fill="#8884d8"
-                    dataKey="value"
-                    label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
-                  >
-                    {topicData.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={entry.color} />
-                    ))}
-                  </Pie>
-                  <Tooltip 
-                    contentStyle={{ 
-                      backgroundColor: 'rgba(30, 41, 59, 0.8)', 
-                      borderColor: 'rgba(148, 163, 184, 0.2)',
-                      borderRadius: '8px',
-                      color: '#fff',
-                      backdropFilter: 'blur(8px)'
-                    }} 
-                    formatter={(value) => [`${value} problems`, 'Count']}
-                  />
-                  <Legend />
-                </PieChart>
-              </ResponsiveContainer>
+            <CardContent className="flex flex-col items-center justify-center py-10">
+              <div className="w-full h-[300px] mb-6">
+                <ResponsiveContainer width="100%" height="100%">
+                  <PieChart>
+                    <Pie
+                      data={topicData}
+                      cx="50%"
+                      cy="50%"
+                      labelLine={false}
+                      label={renderCustomLabel}
+                      outerRadius={100}
+                      fill="#8884d8"
+                      dataKey="value"
+                    >
+                      {topicData.map((entry, index) => (
+                        <Cell key={`cell-${index}`} fill={entry.color} />
+                      ))}
+                    </Pie>
+                    <Tooltip
+                      contentStyle={{
+                        backgroundColor: 'rgba(30, 41, 59, 0.8)',
+                        borderColor: 'rgba(148, 163, 184, 0.2)',
+                        borderRadius: '8px',
+                        color: '#fff',
+                        backdropFilter: 'blur(8px)'
+                      }}
+                      formatter={(value) => [`${value} problems`, 'Count']}
+                    />
+                  </PieChart>
+                </ResponsiveContainer>
+              </div>
+              <div className="flex flex-wrap justify-center gap-4 mt-2">
+                {topicData.map((entry) => (
+               <Badge
+               key={entry.name}
+               variant="outline"
+               className="rounded-full px-4 py-1 text-sm border-none"
+               style={{
+                 backgroundColor: `rgba(0, 0, 0, 0.05)`,
+                 color: entry.color
+               }}
+             >
+               {entry.name}
+             </Badge>               
+                ))}
+              </div>
             </CardContent>
           </Card>
         </div>
-        
+
+        {/* Platform Statistics */}
         <Card className="overflow-hidden border border-border/50 backdrop-blur-sm bg-card/30 mb-12">
           <CardHeader className="bg-primary/5 border-b border-border/30">
             <CardTitle>Platform Statistics</CardTitle>
@@ -160,11 +153,12 @@ const CompetitiveProgrammingSection = () => {
             </div>
           </CardContent>
         </Card>
-        
+
+        {/* Other Sections */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <Card className="overflow-hidden border border-border/50 backdrop-blur-sm bg-card/30">
             <CardHeader className="bg-primary/5 border-b border-border/30">
-              <CardTitle>Problem Filters</CardTitle>
+              <CardTitle>Problem Domains</CardTitle>
               <CardDescription>Common topics I've solved problems in</CardDescription>
             </CardHeader>
             <CardContent className="pt-6">
@@ -181,35 +175,24 @@ const CompetitiveProgrammingSection = () => {
               </div>
             </CardContent>
           </Card>
-          
+
           <Card className="overflow-hidden border border-border/50 backdrop-blur-sm bg-card/30">
             <CardHeader className="bg-primary/5 border-b border-border/30">
-              <CardTitle>SQL Skills</CardTitle>
-              <CardDescription>Proficiency in SQL concepts</CardDescription>
+              <CardTitle>SQL Practice</CardTitle>
+              <CardDescription>Problems solved in SQL</CardDescription>
             </CardHeader>
-            <CardContent className="pt-6 h-72">
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart
-                  data={sqlSkillsData}
-                  layout="vertical"
-                  margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-                >
-                  <CartesianGrid strokeDasharray="3 3" stroke="#66666620" horizontal={false} />
-                  <XAxis type="number" domain={[0, 100]} />
-                  <YAxis dataKey="skill" type="category" width={100} />
-                  <Tooltip 
-                    contentStyle={{ 
-                      backgroundColor: 'rgba(30, 41, 59, 0.8)', 
-                      borderColor: 'rgba(148, 163, 184, 0.2)',
-                      borderRadius: '8px',
-                      color: '#fff',
-                      backdropFilter: 'blur(8px)'
-                    }} 
-                    formatter={(value) => [`${value}%`, 'Proficiency']}
-                  />
-                  <Bar dataKey="level" fill="#91cc75" />
-                </BarChart>
-              </ResponsiveContainer>
+            <CardContent className="pt-6">
+              <div className="flex flex-wrap gap-3 items-center">
+                <Badge variant="secondary" className="rounded-full py-2 px-4 text-base">
+                  LeetCode SQL: 54 Problems
+                </Badge>
+                <Badge variant="secondary" className="rounded-full py-2 px-4 text-base">
+                  HackerRank SQL: 23 Problems
+                </Badge>
+                <Badge variant="secondary" className="rounded-full py-2 px-4 text-base">
+                  CodeChef SQL: 38 Problems
+                </Badge>
+              </div>
             </CardContent>
           </Card>
         </div>
