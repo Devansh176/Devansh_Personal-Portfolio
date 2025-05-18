@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Code } from "lucide-react";
 
 const ContactSection = () => {
   return (
@@ -11,7 +11,7 @@ const ContactSection = () => {
       <div className="section-container">
         <h2 className="section-title text-center text-primary-foreground">Contact Me</h2>
         <p className="text-center text-primary-foreground/80 mb-12 max-w-3xl mx-auto">
-          Feel free to reach out if you're looking for a developer, have a question, or just want to connect.
+          Feel free to reach out if you're looking for a fresher developer, have a question, or just want to connect.
         </p>
         
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
@@ -60,18 +60,20 @@ const ContactSection = () => {
               <CardContent className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Mail className="h-5 w-5" />
-                  <span>contact@example.com</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Github className="h-5 w-5" />
-                  <a href="https://github.com/username" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                    github.com/username
+                  <a href="mailto:youremail@example.com" className="hover:underline">
+                    youremail@example.com
                   </a>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Linkedin className="h-5 w-5" />
-                  <a href="https://linkedin.com/in/username" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                    linkedin.com/in/username
+                  <a href="https://linkedin.com/in/devansh-dhopte" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                    linkedin.com/in/devansh-dhopte
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Code className="h-5 w-5" />
+                  <a href="https://codolio.com/devansh" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                    codolio.com/devansh
                   </a>
                 </div>
               </CardContent>
@@ -79,14 +81,15 @@ const ContactSection = () => {
             
             <Card className="bg-white/10 border-white/10 text-white">
               <CardHeader>
-                <CardTitle>Let's Connect</CardTitle>
+                <CardTitle>Looking For Opportunities</CardTitle>
                 <CardDescription className="text-white/70">
-                  Open to new opportunities
+                  Fresh graduate seeking full-time roles
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p>
-                  Whether you have a project in mind or just want to chat, I'm always open to discussing new opportunities and ideas.
+                  I'm a third-year IT student at Ramdeobaba College of Engineering and Management, 
+                  actively seeking internship and entry-level opportunities in software development.
                 </p>
               </CardContent>
             </Card>

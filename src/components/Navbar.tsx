@@ -2,13 +2,13 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { ExternalLink, Menu } from "lucide-react";
+import { ExternalLink, Menu, Code } from "lucide-react";
 
 const navLinks = [
   { name: "Home", href: "#home" },
   { name: "Projects", href: "#projects" },
-  { name: "Experience", href: "#experience" },
   { name: "Skills", href: "#skills" },
+  { name: "Certificates", href: "#certificates" },
   { name: "Resume", href: "#resume" },
   { name: "Contact", href: "#contact" },
 ];
@@ -49,8 +49,9 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          <a href="#home" className="text-xl font-bold text-primary">
-            Portfolio
+          <a href="#home" className="flex items-center gap-2 text-xl font-bold text-primary">
+            <Code className="h-6 w-6" />
+            <span>Devansh</span>
           </a>
           
           {/* Desktop Navigation */}
@@ -68,8 +69,10 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <Button variant="outline" size="sm" className="flex items-center gap-2">
-              Resume <ExternalLink className="h-4 w-4" />
+            <Button variant="outline" size="sm" className="flex items-center gap-2" asChild>
+              <a href="#resume">
+                Resume <ExternalLink className="h-4 w-4" />
+              </a>
             </Button>
           </nav>
           
@@ -98,8 +101,10 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <Button variant="outline" size="sm" className="flex items-center gap-2 mt-2">
-              Resume <ExternalLink className="h-4 w-4" />
+            <Button variant="outline" size="sm" className="flex items-center gap-2 mt-2" asChild>
+              <a href="#resume">
+                Resume <ExternalLink className="h-4 w-4" />
+              </a>
             </Button>
           </div>
         )}

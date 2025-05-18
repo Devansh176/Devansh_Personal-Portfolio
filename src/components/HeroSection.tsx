@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Linkedin, Mail, Code } from "lucide-react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const HeroSection = () => {
   const scrollToProjects = () => {
@@ -10,26 +11,59 @@ const HeroSection = () => {
     }
   };
 
+  const openGmail = () => {
+    window.open("mailto:youremail@example.com", "_blank");
+  };
+
+  const openLinkedIn = () => {
+    window.open("https://www.linkedin.com/in/devansh-dhopte/", "_blank");
+  };
+
+  const openCodolio = () => {
+    window.open("https://codolio.com/devansh", "_blank");
+  };
+
   return (
-    <section id="home" className="min-h-screen flex items-center relative bg-gradient-to-b from-white to-blue-50">
-      <div className="section-container flex flex-col items-center text-center lg:text-left lg:items-start">
-        <div className="lg:max-w-3xl">
+    <section id="home" className="min-h-screen flex items-center relative bg-gradient-to-b from-white to-olive-50">
+      <div className="section-container flex flex-col items-center text-center lg:text-left lg:flex-row lg:justify-between">
+        <div className="lg:max-w-2xl">
           <p className="text-accent font-medium mb-4 animate-fade-in">Hello, I'm a</p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-primary animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            Software Engineer
+            IT Student
           </h1>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl animate-fade-in" style={{ animationDelay: "0.4s" }}>
-            I build exceptional digital products with a focus on user experience and performance.
-            Specializing in Android development and backend systems.
+            Currently in my 3rd year at Ramdeobaba College of Engineering and Management.
+            Actively looking for opportunities as a fresher in software development.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: "0.6s" }}>
+
+          <div className="flex flex-wrap gap-4 justify-center lg:justify-start animate-fade-in mb-6" style={{ animationDelay: "0.6s" }}>
             <Button onClick={scrollToProjects} className="rounded-full px-6">
               View Projects
             </Button>
-            <Button variant="outline" className="rounded-full px-6">
-              Contact Me
+            <Button variant="outline" className="rounded-full px-6" asChild>
+              <a href="#contact">Contact Me</a>
             </Button>
           </div>
+
+          <div className="flex gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: "0.8s" }}>
+            <button onClick={openLinkedIn} className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
+              <Linkedin className="h-6 w-6 text-primary" />
+            </button>
+            <button onClick={openGmail} className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
+              <Mail className="h-6 w-6 text-primary" />
+            </button>
+            <button onClick={openCodolio} className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
+              <Code className="h-6 w-6 text-primary" />
+            </button>
+          </div>
+        </div>
+
+        <div className="mt-8 lg:mt-0 flex flex-col items-center animate-fade-in" style={{ animationDelay: "0.6s" }}>
+          <Avatar className="h-48 w-48 border-4 border-primary/20 shadow-xl">
+            <AvatarImage src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" alt="Devansh P. Dhopte" />
+            <AvatarFallback>DP</AvatarFallback>
+          </Avatar>
+          <h2 className="text-2xl font-bold mt-4 text-primary">Devansh P. Dhopte</h2>
         </div>
       </div>
       
@@ -45,7 +79,7 @@ const HeroSection = () => {
       </div>
       
       {/* Background elements */}
-      <div className="absolute right-0 top-0 w-1/2 h-full bg-[radial-gradient(ellipse_at_top_right,rgba(59,130,246,0.1),transparent_70%)] pointer-events-none"></div>
+      <div className="absolute right-0 top-0 w-1/2 h-full bg-[radial-gradient(ellipse_at_top_right,rgba(126,159,75,0.1),transparent_70%)] pointer-events-none"></div>
     </section>
   );
 };

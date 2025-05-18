@@ -2,11 +2,11 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ProjectsSection from "@/components/ProjectsSection";
-import ExperienceSection from "@/components/ExperienceSection";
 import SkillsSection from "@/components/SkillsSection";
 import ResumeSection from "@/components/ResumeSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import CertificatesSection from "@/components/CertificatesSection";
 
 const Index = () => {
   return (
@@ -14,8 +14,8 @@ const Index = () => {
       <Navbar />
       <HeroSection />
       <ProjectsSection />
-      <ExperienceSection />
       <SkillsSection />
+      <CertificatesSection />
       <ResumeSection />
       <ContactSection />
       <Footer />
