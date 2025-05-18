@@ -6,10 +6,10 @@ import { ExternalLink, Menu, Code } from "lucide-react";
 
 const navLinks = [
   { name: "Home", href: "#home" },
+  { name: "Resume", href: "#resume" },
   { name: "Projects", href: "#projects" },
   { name: "Skills", href: "#skills" },
   { name: "Certificates", href: "#certificates" },
-  { name: "Resume", href: "#resume" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -49,9 +49,10 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          <a href="#home" className="flex items-center gap-2 text-xl font-bold text-primary">
-            <Code className="h-6 w-6" />
-            <span>Devansh</span>
+          <a href="#home" className="flex items-center gap-2">
+            <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+              <Code className="h-6 w-6 text-primary" />
+            </div>
           </a>
           
           {/* Desktop Navigation */}

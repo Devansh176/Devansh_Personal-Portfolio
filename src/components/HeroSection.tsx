@@ -4,15 +4,15 @@ import { ArrowDown, Linkedin, Mail, Code } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const HeroSection = () => {
-  const scrollToProjects = () => {
-    const projectsSection = document.querySelector("#projects");
-    if (projectsSection) {
-      projectsSection.scrollIntoView({ behavior: "smooth" });
+  const scrollToContact = () => {
+    const contactSection = document.querySelector("#contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   const openGmail = () => {
-    window.open("mailto:youremail@example.com", "_blank");
+    window.open("mailto:devanshdhopte@gmail.com", "_blank");
   };
 
   const openLinkedIn = () => {
@@ -27,21 +27,17 @@ const HeroSection = () => {
     <section id="home" className="min-h-screen flex items-center relative bg-gradient-to-b from-white to-olive-50">
       <div className="section-container flex flex-col items-center text-center lg:text-left lg:flex-row lg:justify-between">
         <div className="lg:max-w-2xl">
-          <p className="text-accent font-medium mb-4 animate-fade-in">Hello, I'm a</p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-primary animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            IT Student
+            I am Devansh
           </h1>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl animate-fade-in" style={{ animationDelay: "0.4s" }}>
-            Currently in my 3rd year at Ramdeobaba College of Engineering and Management.
-            Actively looking for opportunities as a fresher in software development.
+            Pursuing IT at Ramdeobaba College of Engineering and Management.
+            Currently in my 3rd year and actively looking for opportunities as a fresher in software development.
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center lg:justify-start animate-fade-in mb-6" style={{ animationDelay: "0.6s" }}>
-            <Button onClick={scrollToProjects} className="rounded-full px-6">
-              View Projects
-            </Button>
-            <Button variant="outline" className="rounded-full px-6" asChild>
-              <a href="#contact">Contact Me</a>
+            <Button onClick={scrollToContact} className="rounded-full px-6">
+              Contact Me
             </Button>
           </div>
 
@@ -71,7 +67,7 @@ const HeroSection = () => {
         <Button 
           variant="ghost" 
           size="icon" 
-          onClick={scrollToProjects}
+          onClick={scrollToContact}
           className="rounded-full"
         >
           <ArrowDown className="h-5 w-5" />
