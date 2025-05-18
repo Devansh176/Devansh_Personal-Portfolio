@@ -45,12 +45,51 @@
     --sidebar-ring: 79 39% 59.8%;
   }
 
+  .dark {
+    --background: 79 25% 8%;
+    --foreground: 79 10% 90%;
+
+    --card: 79 25% 10%;
+    --card-foreground: 79 10% 90%;
+
+    --popover: 79 25% 10%;
+    --popover-foreground: 79 10% 90%;
+
+    --primary: 79 30% 45%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 79 25% 16%;
+    --secondary-foreground: 79 10% 90%;
+
+    --muted: 79 25% 16%;
+    --muted-foreground: 79 10% 70%;
+
+    --accent: 79 30% 40%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 79 25% 20%;
+    --input: 79 25% 20%;
+    --ring: 79 30% 45%;
+
+    --sidebar-background: 79 25% 10%;
+    --sidebar-foreground: 79 10% 90%;
+    --sidebar-primary: 79 30% 50%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 79 25% 18%;
+    --sidebar-accent-foreground: 79 10% 90%;
+    --sidebar-border: 79 25% 24%;
+    --sidebar-ring: 79 30% 45%;
+  }
+
   * {
     @apply border-border;
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground font-sans transition-colors duration-300;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -70,4 +109,98 @@
   .card-hover {
     @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
   }
+}
+
+/* Enhanced animations */
+@layer utilities {
+  .animate-fade-in {
+    @apply opacity-0;
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  .animate-slide-in-right {
+    @apply opacity-0 translate-x-10;
+    animation: slideInRight 0.6s ease-out forwards;
+  }
+  
+  .animate-slide-in-left {
+    @apply opacity-0 -translate-x-10;
+    animation: slideInLeft 0.6s ease-out forwards;
+  }
+  
+  .animate-slide-in-up {
+    @apply opacity-0 translate-y-10;
+    animation: slideInUp 0.6s ease-out forwards;
+  }
+  
+  .animate-scale-in {
+    @apply opacity-0 scale-95;
+    animation: scaleIn 0.5s ease-out forwards;
+  }
+  
+  .animate-bounce-in {
+    animation: bounceIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { 
+    opacity: 0; 
+    transform: translateX(20px);
+  }
+  to { 
+    opacity: 1; 
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from { 
+    opacity: 0; 
+    transform: translateX(-20px);
+  }
+  to { 
+    opacity: 1; 
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from { 
+    opacity: 0; 
+    transform: scale(0.95);
+  }
+  to { 
+    opacity: 1; 
+    transform: scale(1);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
 }
