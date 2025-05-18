@@ -2,7 +2,8 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Menu, Code } from "lucide-react";
+import { Menu, Code, Github, Linkedin, Mail, ExternalLink } from "lucide-react";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -10,7 +11,7 @@ const navLinks = [
   { name: "Projects", href: "#projects" },
   { name: "Skills", href: "#skills" },
   { name: "Certificates", href: "#certificates" },
-  { name: "Contact", href: "#contact" },
+  { name: "CP Stats", href: "#cp-stats" },
 ];
 
 const Navbar = () => {
@@ -50,7 +51,8 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <a href="#home" className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors">
+            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors">
+              {/* Space for logo image */}
               <Code className="h-6 w-6 text-primary" />
             </div>
           </a>
@@ -65,12 +67,51 @@ const Navbar = () => {
                   e.preventDefault();
                   scrollToSection(link.href);
                 }}
-                className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
+                className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors hover:scale-105 transform duration-200"
               >
                 {link.name}
               </a>
             ))}
           </nav>
+          
+          {/* Social Links */}
+          <div className="hidden md:flex items-center space-x-4">
+            <a 
+              href="https://github.com/username"
+              target="_blank"
+              rel="noopener noreferrer" 
+              className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors hover:scale-110 transition-transform duration-300"
+              aria-label="GitHub"
+            >
+              <Github className="h-4 w-4 text-primary" />
+            </a>
+            <a 
+              href="https://linkedin.com/in/devansh-dhopte"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors hover:scale-110 transition-transform duration-300"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="h-4 w-4 text-primary" />
+            </a>
+            <a 
+              href="mailto:devanshdhopte@gmail.com"
+              className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors hover:scale-110 transition-transform duration-300"
+              aria-label="Email"
+            >
+              <Mail className="h-4 w-4 text-primary" />
+            </a>
+            <a 
+              href="https://codolio.com/devansh"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors hover:scale-110 transition-transform duration-300"
+              aria-label="Codolio"
+            >
+              <span className="text-sm font-medium text-primary">Codolio</span>
+              <ExternalLink className="h-3 w-3 text-primary" />
+            </a>
+          </div>
           
           {/* Mobile Menu Button */}
           <button
@@ -97,6 +138,30 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
+            <div className="flex items-center space-x-4 mt-4 pt-4 border-t border-border">
+              <a 
+                href="https://github.com/username"
+                target="_blank"
+                rel="noopener noreferrer" 
+                className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
+              >
+                <Github className="h-4 w-4 text-primary" />
+              </a>
+              <a 
+                href="https://linkedin.com/in/devansh-dhopte"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
+              >
+                <Linkedin className="h-4 w-4 text-primary" />
+              </a>
+              <a 
+                href="mailto:devanshdhopte@gmail.com"
+                className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
+              >
+                <Mail className="h-4 w-4 text-primary" />
+              </a>
+            </div>
           </div>
         )}
       </div>

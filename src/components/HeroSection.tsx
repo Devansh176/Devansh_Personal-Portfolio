@@ -1,28 +1,7 @@
 
-import { Button } from "@/components/ui/button";
-import { Linkedin, Mail, Code } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const HeroSection = () => {
-  const scrollToContact = () => {
-    const contactSection = document.querySelector("#contact");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  const openGmail = () => {
-    window.open("mailto:devanshdhopte@gmail.com", "_blank");
-  };
-
-  const openLinkedIn = () => {
-    window.open("https://www.linkedin.com/in/devansh-dhopte/", "_blank");
-  };
-
-  const openCodolio = () => {
-    window.open("https://codolio.com/devansh", "_blank");
-  };
-
   return (
     <section id="home" className="min-h-screen flex items-center relative bg-gradient-to-b from-background to-secondary/20 dark:from-background dark:to-primary/5">
       <div className="section-container flex flex-col items-center text-center lg:text-left lg:flex-row lg:justify-between">
@@ -36,21 +15,7 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center lg:justify-start animate-fade-in mb-6" style={{ animationDelay: "0.6s" }}>
-            <Button onClick={scrollToContact} className="rounded-full px-6">
-              Contact Me
-            </Button>
-          </div>
-
-          <div className="flex gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: "0.8s" }}>
-            <button onClick={openLinkedIn} className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors hover:scale-110 transition-transform duration-300">
-              <Linkedin className="h-6 w-6 text-primary" />
-            </button>
-            <button onClick={openGmail} className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors hover:scale-110 transition-transform duration-300">
-              <Mail className="h-6 w-6 text-primary" />
-            </button>
-            <button onClick={openCodolio} className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors hover:scale-110 transition-transform duration-300">
-              <Code className="h-6 w-6 text-primary" />
-            </button>
+            {/* Contact Me button removed as requested */}
           </div>
         </div>
 
@@ -63,8 +28,9 @@ const HeroSection = () => {
         </div>
       </div>
       
-      {/* Background elements */}
-      <div className="absolute right-0 top-0 w-1/2 h-full bg-[radial-gradient(ellipse_at_top_right,rgba(126,159,75,0.1),transparent_70%)] pointer-events-none"></div>
+      {/* Background elements with enhanced animation */}
+      <div className="absolute right-0 top-0 w-1/2 h-full bg-[radial-gradient(ellipse_at_top_right,rgba(126,159,75,0.1),transparent_70%)] pointer-events-none animate-pulse-slow"></div>
+      <div className="absolute left-0 bottom-0 w-1/3 h-1/2 bg-[radial-gradient(ellipse_at_bottom_left,rgba(126,159,75,0.08),transparent_70%)] pointer-events-none animate-float"></div>
     </section>
   );
 };

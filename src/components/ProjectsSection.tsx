@@ -57,6 +57,46 @@ const projects = [
     tags: ["Spring Boot", "Docker", "Kubernetes", "Kafka"],
     githubLink: "https://github.com/username/project5",
     liveLink: "https://project5.com"
+  },
+  {
+    id: 6,
+    title: "Weather App",
+    description: "Real-time weather forecasting application with beautiful UI and animations.",
+    category: "flutter",
+    image: "https://placehold.co/600x400/e2e8f0/1e293b?text=Weather+App",
+    tags: ["Flutter", "Dart", "API Integration", "Animations"],
+    githubLink: "https://github.com/username/project6",
+    liveLink: "https://project6.com"
+  },
+  {
+    id: 7,
+    title: "Serverless Cloud Functions",
+    description: "A collection of serverless functions for automated data processing and notifications.",
+    category: "cloud",
+    image: "https://placehold.co/600x400/e2e8f0/1e293b?text=Cloud+Functions",
+    tags: ["AWS Lambda", "Firebase Functions", "Serverless"],
+    githubLink: "https://github.com/username/project7",
+    liveLink: "https://project7.com"
+  },
+  {
+    id: 8,
+    title: "Smart Home System",
+    description: "IoT-based smart home system with sensor integration and mobile control.",
+    category: "iot/cps",
+    image: "https://placehold.co/600x400/e2e8f0/1e293b?text=Smart+Home",
+    tags: ["Arduino", "Raspberry Pi", "MQTT", "Sensors"],
+    githubLink: "https://github.com/username/project8",
+    liveLink: "https://project8.com"
+  },
+  {
+    id: 9,
+    title: "Image Recognition System",
+    description: "Deep learning model for image classification and object detection.",
+    category: "ml",
+    image: "https://placehold.co/600x400/e2e8f0/1e293b?text=ML+Project",
+    tags: ["Python", "TensorFlow", "Computer Vision", "CNN"],
+    githubLink: "https://github.com/username/project9",
+    liveLink: "https://project9.com"
   }
 ];
 
@@ -72,15 +112,19 @@ const ProjectsSection = () => {
     <section id="projects" className="bg-secondary/30 py-20">
       <div className="section-container">
         <h2 className="section-title text-center">Projects</h2>
-        <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+        <p className="text-center text-foreground/80 mb-12 max-w-3xl mx-auto">
           Explore my projects across different technology domains. Each project showcases different skills and approaches to solving problems.
         </p>
         
         <Tabs defaultValue="all" value={activeTab} onValueChange={setActiveTab} className="mb-12">
           <div className="flex justify-center">
-            <TabsList className="mb-8">
+            <TabsList className="mb-8 bg-background/50 backdrop-blur-sm p-1 rounded-xl">
               {categories.map((category) => (
-                <TabsTrigger key={category} value={category} className="capitalize">
+                <TabsTrigger 
+                  key={category} 
+                  value={category} 
+                  className="capitalize rounded-lg px-4 py-2 transition-all duration-300"
+                >
                   {category}
                 </TabsTrigger>
               ))}
@@ -91,18 +135,18 @@ const ProjectsSection = () => {
             <TabsContent key={category} value={category} className="mt-0">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredProjects.map((project) => (
-                  <Card key={project.id} className="card-hover overflow-hidden">
+                  <Card key={project.id} className="overflow-hidden border border-border/50 bg-card/60 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/10">
                     <div className="aspect-video overflow-hidden">
                       <img 
                         src={project.image} 
                         alt={project.title} 
-                        className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                       />
                     </div>
                     <CardHeader>
                       <div className="flex justify-between items-start">
                         <CardTitle>{project.title}</CardTitle>
-                        <Badge variant="outline" className="capitalize">
+                        <Badge variant="outline" className="capitalize rounded-full">
                           {project.category}
                         </Badge>
                       </div>
@@ -113,19 +157,19 @@ const ProjectsSection = () => {
                     <CardContent>
                       <div className="flex flex-wrap gap-2">
                         {project.tags.map((tag) => (
-                          <Badge key={tag} variant="secondary" className="text-xs">
+                          <Badge key={tag} variant="secondary" className="text-xs rounded-full">
                             {tag}
                           </Badge>
                         ))}
                       </div>
                     </CardContent>
                     <CardFooter className="flex justify-between">
-                      <Button variant="outline" size="sm" className="flex items-center gap-2" asChild>
+                      <Button variant="outline" size="sm" className="flex items-center gap-2 rounded-full" asChild>
                         <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
                           <Github className="h-4 w-4" /> Code
                         </a>
                       </Button>
-                      <Button size="sm" className="flex items-center gap-2" asChild>
+                      <Button size="sm" className="flex items-center gap-2 bg-primary/90 hover:bg-primary rounded-full shadow-sm hover:shadow-md transition-all duration-300" asChild>
                         <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
                           Live Demo <ExternalLink className="h-4 w-4" />
                         </a>
