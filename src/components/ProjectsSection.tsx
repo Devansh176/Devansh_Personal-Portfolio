@@ -74,7 +74,7 @@ const projects = [
   {
     id: 8,
     title: "Secure Backend",
-    description: "A secure REST API for user registration, email verification, login, and JWT-protected routes — built with Express.js and MongoDB Atlas.",
+    description: "Secure user auth API with email verification and JWT using Express & MongoDB.",
     category: "backend",
     image: "mongo.png",
     tags: ["Node.js", "Express.js", "MongoDB Atlas", "Nodemailer"],
@@ -83,7 +83,7 @@ const projects = [
   {
     id: 9,
     title: "Url Shortner App",
-    description: "Create, manage, and track shortened URLs with real-time redirection and analytics using the MERN stack.",
+    description: "Shorten and track URLs with real-time redirection using the MERN stack.",
     category: "Full Stack",
     image: "url.jpg",
     tags: ["Node.js", "Express.js", "MongoDB Atlas", "React.js", "Mongoose", "Axios"],

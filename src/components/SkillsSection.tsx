@@ -10,7 +10,9 @@ const skillCategories = [
       { name: "Dart", level: "Intermediate" },
       { name: "C", level: "Intermediate" },
       { name: "Python", level: "Intermediate" },
-      { name: "Kotlin", level: "Intermediate" }
+      { name: "Kotlin", level: "Intermediate" },
+      { name: "JavaScript", level: "Beginner" },
+      { name: "TypeScript", level: "Beginner" }
     ]
   },
   {
@@ -64,6 +66,7 @@ const skillCategories = [
     skills: [
       { name: "Data Structures & Algorithms", level: "Advanced" },
       { name: "OOP", level: "Advanced" },
+      { name: "DBMS", level: "Advanced" },
       { name: "System Design", level: "Beginner" },
       { name: "Linux", level: "Intermediate" },
       { name: "Operating Systems", level: "Intermediate" },
