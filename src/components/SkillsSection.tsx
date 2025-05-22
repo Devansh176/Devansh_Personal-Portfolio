@@ -30,6 +30,8 @@ const skillCategories = [
       { name: "Spring Boot", level: "Intermediate" },
       { name: "REST APIs", level: "Advanced" },
       { name: "Firebase", level: "Intermediate" },
+      { name: "ExpressJs", level: "Beginner" },
+      { name: "NodeJS", level: "Beginner" },
       { name: "AWS", level: "Intermediate" },
       { name: "Docker", level: "Beginner" },
       { name: "Google Cloud", level: "Beginner" },
@@ -44,7 +46,8 @@ const skillCategories = [
     description: "Databases and development tools I’ve worked with",
     skills: [
       { name: "PostgreSQL", level: "Intermediate" },
-      { name: "MySQL", level: "Beginner" },
+      { name: "MySQL", level: "Intermediate" },
+      { name: "MongoDB", level: "Beginner" },
       { name: "Sqflite", level: "Intermediate" },
       { name: "SQLite", level: "Intermediate" },
       { name: "pgAdmin", level: "Beginner" },

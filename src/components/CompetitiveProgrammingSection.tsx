@@ -4,8 +4,8 @@ import { Badge } from "@/components/ui/badge";
 
 // LeetCode problem data
 const leetcodeData = [
-  { name: 'Easy', value: 133, color: '#73c0de' },
-  { name: 'Medium', value: 156, color: '#5470c6' },
+  { name: 'Easy', value: 126, color: '#73c0de' },
+  { name: 'Medium', value: 154, color: '#5470c6' },
   { name: 'Hard', value: 11, color: '#91cc75' },
 ];
 
@@ -17,16 +17,16 @@ const topicData = [
   { name: 'Database', value: 115, color: '#91cc75' },
   { name: 'Trees', value: 27, color: '#73c0de' },
   { name: 'Greedy', value: 28, color: '#3ba272' },
-  { name: 'BFS/DFS', value: 44, color: '#fc8452' },
+  { name: 'BFS/DFS', value: 52, color: '#fc8452' },
   { name: 'DP', value: 21, color: '#fac858' },
 ];
 
 // Platform stats
 const platformStats = [
-  { platform: 'LeetCode', problems: 288, rank: '371,752', rating: '-' },
+  { platform: 'LeetCode', problems: 291, rank: '367,746', rating: '-' },
   { platform: 'HackerRank', problems: 55, rank: '9,874', rating: '5⭐' },
-  { platform: 'CodeChef', problems: 51, rank: '7,456', rating: '1,267' },
-  { platform: 'GeeksForGeeks', problems: 13, rank: '658', rating: '-' },
+  { platform: 'CodeChef', problems: 53, rank: '7,456', rating: '1215' },
+  { platform: 'GeeksForGeeks', problems: 16, rank: '591', rating: '-' },
   { platform: 'CodeForces', problems: 5, rank: '12,065', rating: '382' }
 ];
 

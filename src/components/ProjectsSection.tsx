@@ -73,16 +73,24 @@ const projects = [
   },
   {
     id: 8,
-    title: "User Task Management System",
-    description: "Task manager with Firebase auth and real-time CRUD.",
-    category: "flutter",
-    image: "i8.webp",
-    tags: ["Flutter", "Firebase", "Spring Boot"],
-    githubLink: "https://github.com/Devansh176/GDG_App.git",
-    liveLink: "https://appetize.io/app/b_omdfosuibokiqbyqi73ot42zaq"
+    title: "Secure Backend",
+    description: "A secure REST API for user registration, email verification, login, and JWT-protected routes — built with Express.js and MongoDB Atlas.",
+    category: "backend",
+    image: "mongo.png",
+    tags: ["Node.js", "Express.js", "MongoDB Atlas", "Nodemailer"],
+    githubLink: "https://github.com/Devansh176/Secure_Backend",
   },
   {
     id: 9,
+    title: "Url Shortner App",
+    description: "Create, manage, and track shortened URLs with real-time redirection and analytics using the MERN stack.",
+    category: "Full Stack",
+    image: "url.jpg",
+    tags: ["Node.js", "Express.js", "MongoDB Atlas", "React.js", "Mongoose", "Axios"],
+    githubLink: "https://github.com/Devansh176/Url_shortner",
+  },
+  {
+    id: 10,
     title: "Todo List",
     description: "To-do app with Provider, SQLite, and due date tracking.",
     category: "flutter",
@@ -92,7 +100,7 @@ const projects = [
     liveLink: "https://appetize.io/app/b_fhcdhygsl37w37n4lbr545pfjq"
   },
   {
-    id: 10,
+    id: 11,
     title: "QR Code Scanner",
     description: "QR code scanner with link redirection and sharing.",
     category: "flutter",
@@ -102,14 +110,24 @@ const projects = [
     liveLink: "https://appetize.io/app/b_dqcoawru7lnh6kuinjhbkpvnhe"
   },
   {
-    id: 11,
+    id: 12,
     title: "Student Profile",
     description: "Student profile app for saving and retrieving student details.",
     category: "flutter",
     image: "profile.png",
     tags: ["Flutter", "Dart", "Spring Boot"],
     githubLink: "https://github.com/Devansh176/Studentprofile",
-  }
+  },
+  {
+    id: 13,
+    title: "User Task Management System",
+    description: "Task manager with Firebase auth and real-time CRUD.",
+    category: "flutter",
+    image: "i8.webp",
+    tags: ["Flutter", "Firebase", "Spring Boot"],
+    githubLink: "https://github.com/Devansh176/GDG_App.git",
+    liveLink: "https://appetize.io/app/b_omdfosuibokiqbyqi73ot42zaq"
+  },
 ];
 
 const ProjectsSection = () => {
