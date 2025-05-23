@@ -24,7 +24,7 @@ const ResumeSection = () => {
                 className="flex items-center gap-2 hover:scale-105 transition-transform duration-300 rounded-full shadow-md hover:shadow-lg" 
                 asChild
               >
-                <a href="https://drive.google.com/file/d/13a9vL7pbUm5EBRvwB7gYOKdvkdC2ynMY/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <a href="DevanshDhopte_FullResume.pdf">
                   View Online <ExternalLink className="h-4 w-4" />
                 </a>
               </Button>
