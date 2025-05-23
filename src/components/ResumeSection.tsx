@@ -1,8 +1,13 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { ExternalLink, Download } from "lucide-react";
+import { useState } from "react";
 
 const ResumeSection = () => {
+  const [isPdfOpen, setIsPdfOpen] = useState(false);
+
   return (
     <section id="resume" className="py-20 bg-background dark:bg-background/60">
       <div className="section-container">
@@ -20,14 +25,25 @@ const ResumeSection = () => {
               </CardDescription>
             </CardHeader>
             <CardContent className="flex flex-col md:flex-row justify-center gap-4">
-              <Button 
-                className="flex items-center gap-2 hover:scale-105 transition-transform duration-300 rounded-full shadow-md hover:shadow-lg" 
-                asChild
-              >
-                <a href="https://drive.google.com/file/d/13a9vL7pbUm5EBRvwB7gYOKdvkdC2ynMY/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                  View Online <ExternalLink className="h-4 w-4" />
-                </a>
-              </Button>
+              <Dialog open={isPdfOpen} onOpenChange={setIsPdfOpen}>
+                <DialogTrigger asChild>
+                  <Button 
+                    className="flex items-center gap-2 hover:scale-105 transition-transform duration-300 rounded-full shadow-md hover:shadow-lg" 
+                  >
+                    View Online <ExternalLink className="h-4 w-4" />
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="max-w-[90vw] w-[90vw] max-h-[90vh] h-[90vh] p-0 overflow-hidden">
+                  <div className="w-full h-full">
+                    <iframe
+                      src="/resume.pdf"
+                      title="Resume PDF"
+                      className="w-full h-full"
+                      style={{ border: "none" }}
+                    />
+                  </div>
+                </DialogContent>
+              </Dialog>
             </CardContent>
           </Card>
           
