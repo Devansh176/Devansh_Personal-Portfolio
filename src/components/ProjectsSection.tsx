@@ -200,7 +200,7 @@ const ProjectsSection = () => {
                     </CardContent>
                     <CardFooter className="flex justify-between">
                     <Button variant="outline" size="sm" className="flex items-center gap-2 rounded-full" asChild>
-                      <a href='DevanshDhopte_FullResume.pdf' target="_blank" rel="noopener noreferrer">
+                      <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
                         <Github className="h-4 w-4" /> Code
                       </a>
                     </Button>
