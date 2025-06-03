@@ -4,30 +4,30 @@ import { Badge } from "@/components/ui/badge";
 
 // LeetCode problem data
 const leetcodeData = [
-  { name: 'Easy', value: 126, color: '#73c0de' },
-  { name: 'Medium', value: 154, color: '#5470c6' },
-  { name: 'Hard', value: 11, color: '#91cc75' },
+  { name: 'Easy', value: 127, color: '#73c0de' },
+  { name: 'Medium', value: 169, color: '#5470c6' },
+  { name: 'Hard', value: 19, color: '#91cc75' },
 ];
 
 // Topic distribution data
 const topicData = [
-  { name: 'Arrays', value: 133, color: '#5470c6' },
-  { name: 'Strings', value: 53, color: '#f930a4' },
-  { name: 'HashMap', value: 49, color: '#ee6666' },
+  { name: 'Arrays', value: 143, color: '#5470c6' },
+  { name: 'Strings', value: 56, color: '#f930a4' },
+  { name: 'HashMap', value: 54, color: '#ee6666' },
   { name: 'Database', value: 115, color: '#91cc75' },
-  { name: 'Trees', value: 27, color: '#73c0de' },
-  { name: 'Greedy', value: 28, color: '#3ba272' },
-  { name: 'BFS/DFS', value: 52, color: '#fc8452' },
-  { name: 'DP', value: 21, color: '#fac858' },
+  { name: 'Trees', value: 28, color: '#73c0de' },
+  { name: 'Greedy', value: 29, color: '#3ba272' },
+  { name: 'BFS/DFS', value: 82, color: '#fc8452' },
+  { name: 'DP', value: 24, color: '#fac858' },
 ];
 
 // Platform stats
 const platformStats = [
-  { platform: 'LeetCode', problems: 291, rank: '367,746', rating: '-' },
-  { platform: 'HackerRank', problems: 55, rank: '9,874', rating: '5⭐' },
-  { platform: 'CodeChef', problems: 53, rank: '7,456', rating: '1215' },
-  { platform: 'GeeksForGeeks', problems: 16, rank: '591', rating: '-' },
-  { platform: 'CodeForces', problems: 5, rank: '12,065', rating: '382' }
+  { platform: 'LeetCode', problems: 315, rank: '333,157', rating: '1,587' },
+  { platform: 'HackerRank', problems: 55, Hackos: '873', rating: '5⭐' },
+  { platform: 'CodeChef', problems: 53, rank: '1,164', rating: '1322' },
+  { platform: 'GeeksForGeeks', problems: 28, rank: '411', rating: '-' },
+  { platform: 'CodeForces', problems: 5,   rank: '12,065', rating: '611' }
 ];
 
 // Common topics to filter
