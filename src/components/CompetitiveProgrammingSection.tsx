@@ -17,6 +17,7 @@ const topicData = [
   { name: 'Database', value: 115, color: '#91cc75' },
   { name: 'Trees', value: 28, color: '#73c0de' },
   { name: 'Greedy', value: 29, color: '#3ba272' },
+  { name: 'Graph', value: 36, color: '#7F00FF' },
   { name: 'BFS/DFS', value: 82, color: '#fc8452' },
   { name: 'DP', value: 24, color: '#fac858' },
 ];
