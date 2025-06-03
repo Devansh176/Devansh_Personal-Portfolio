@@ -25,7 +25,7 @@ const topicData = [
 // Platform stats
 const platformStats = [
   { platform: 'LeetCode', problems: 315, rank: '333,157', rating: '1,587' },
-  { platform: 'HackerRank', problems: 55, Hackos: '873', rating: '5⭐' },
+  { platform: 'HackerRank', problems: 111, Hackos: '873', rating: '5⭐' },
   { platform: 'CodeChef', problems: 53, rank: '1,164', rating: '1322' },
   { platform: 'GeeksForGeeks', problems: 28, rank: '411', rating: '-' },
   { platform: 'CodeForces', problems: 5,   rank: '12,065', rating: '611' }
