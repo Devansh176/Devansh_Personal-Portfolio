@@ -188,10 +188,10 @@ const CompetitiveProgrammingSection = () => {
                   LeetCode SQL: 54 Problems
                 </Badge>
                 <Badge variant="secondary" className="rounded-full py-2 px-4 text-base">
-                  HackerRank SQL: 23 Problems
+                  HackerRank SQL: 46 Problems
                 </Badge>
                 <Badge variant="secondary" className="rounded-full py-2 px-4 text-base">
-                  CodeChef SQL: 38 Problems
+                  CodeChef SQL: 61 Problems
                 </Badge>
               </div>
             </CardContent>
