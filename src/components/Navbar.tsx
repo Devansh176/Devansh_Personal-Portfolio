@@ -10,9 +10,9 @@ const navLinks = [
   { name: "Resume", href: "#resume" },
   { name: "Projects", href: "#projects" },
   { name: "Skills", href: "#skills" },
+  { name: "CP Stats", href: "#cp-stats" },
   {name : "Internships", href: "#internships"},
   { name: "Certificates", href: "#certificates" },
-  { name: "CP Stats", href: "#cp-stats" },
 ];
 
 const Navbar = () => {
