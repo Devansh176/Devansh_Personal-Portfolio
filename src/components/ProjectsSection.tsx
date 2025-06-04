@@ -28,7 +28,7 @@ const projects = [
     id: 3,
     title: "Data Insights Pipeline",
     description: "Automated metadata detection and insights with Python, AWS RDS, and LLMs.",
-    category: "cloud",
+    category: ["cloud", "ml"],
     image: "img4.jfif",
     tags: ["Python", "AWS", "LLM", "S3", "RDS"],
     githubLink: "https://github.com/Devansh176/Data-Insights-Pipeline.git",
