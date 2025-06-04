@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -85,7 +84,7 @@ const projects = [
     id: 9,
     title: "Url Shortner App",
     description: "Shorten and track URLs with real-time redirection using the MERN stack.",
-    category: ["backend", "flutter"],
+    category: ["backend", "flutter", "mern"],
     image: "url.jpg",
     tags: ["Node.js", "Express.js", "MongoDB Atlas", "React.js", "Mongoose", "Axios"],
     githubLink: "https://github.com/Devansh176/Url_shortner",
