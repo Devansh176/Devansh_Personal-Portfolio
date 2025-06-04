@@ -10,7 +10,7 @@ const projects = [
     id: 1,
     title: "Cyber-Physical Health Monitoring System (CPS)",
     description: "Real-time health data monitoring using Spring Boot, PostgreSQL, and ESP32 via MQTT.",
-    category: "iot/cps",  
+    category: ["iot/cps"],  
     image: "cps_pic.png",
     tags: ["Spring Boot", "Java", "ESP32", "PostgreSQL", "MQTT", "Kotlin"],
     githubLink: "https://github.com/Abhinavan2004/Ensuring-Securing-in-CPS-for-Healthcare-Applications",
@@ -19,7 +19,7 @@ const projects = [
     id: 2,
     title: "Face Detection & Recognition",
     description: "Dockerized ML model for face recognition with AWS Greengrass, MQTT, and SQS.",
-    category: "ml",
+    category: ["ml", "cloud"],
     image: "img3.jfif",
     tags: ["Python", "Docker", "AWS", "MQTT", "Flask"],
     githubLink: "https://github.com/Devansh176/AWS-Face-Recognition.git",
@@ -37,7 +37,7 @@ const projects = [
     id: 4,
     title: "Personal Finance Tracker",
     description: "Track income, expenses, and predict SIP returns using Flutter and Spring Boot.",
-    category: "flutter",
+    category: ["flutter"],
     image: "i5.webp",
     tags: ["Flutter", "Dart", "Spring Boot", "Java", "REST API"],
     githubLink: "https://github.com/Devansh176/FinancialAdvisioryFlutter.git",
@@ -46,7 +46,7 @@ const projects = [
     id: 5,
     title: "Movie App (Cineflex)",
     description: "Displays movies, trailers, and handles bookings with bilingual support.",
-    category: "flutter",
+    category: ["flutter"],
     image: "CfxLogo.jpeg",
     tags: ["Flutter", "TMDb API", "Razorpay", "YouTube API"],
     githubLink: "https://github.com/Devansh176/Movies-and-Series-.git",
@@ -56,7 +56,7 @@ const projects = [
     id: 6,
     title: "Wallpaper App (Wallviz)",
     description: "High-quality image search and wallpaper downloads using Pexels & Unsplash APIs.",
-    category: "flutter",
+    category: ["flutter"],
     image: "i6.webp",
     tags: ["Flutter", "Dart", "Pexels API", "Unsplash API"],
     githubLink: "https://github.com/Devansh176/Wallpaper-App.git",
@@ -66,7 +66,7 @@ const projects = [
     id: 7,
     title: "Facial Expression Detection",
     description: "Real-time emotion recognition using Flutter and TensorFlow Lite.",
-    category: "ml",
+    category: ["ml", "flutter"],
     image: "i7.jfif",
     tags: ["Flutter", "TensorFlow Lite", "Teachable Machine"],
     githubLink: "https://github.com/Devansh176/Face_Expression_Detection.git",
@@ -75,7 +75,7 @@ const projects = [
     id: 8,
     title: "Secure Backend",
     description: "Secure user auth API with email verification and JWT using Express & MongoDB.",
-    category: "backend",
+    category: ["backend", "mern"],
     image: "mongo.png",
     tags: ["Node.js", "Express.js", "MongoDB Atlas", "Nodemailer"],
     githubLink: "https://github.com/Devansh176/Secure_Backend",
@@ -84,7 +84,7 @@ const projects = [
     id: 9,
     title: "Url Shortner App",
     description: "Shorten and track URLs with real-time redirection using the MERN stack.",
-    category: "Full Stack",
+    category: ["backend", "mern"],
     image: "url.jpg",
     tags: ["Node.js", "Express.js", "MongoDB Atlas", "React.js", "Mongoose", "Axios"],
     githubLink: "https://github.com/Devansh176/Url_shortner",
@@ -93,7 +93,7 @@ const projects = [
     id: 10,
     title: "Todo List",
     description: "To-do app with Provider, SQLite, and due date tracking.",
-    category: "flutter",
+    category: ["flutter"],
     image: "todo.jpg",
     tags: ["Flutter", "Dart", "SQLite"],
     githubLink: "https://github.com/Devansh176/TodoList.git",
@@ -103,7 +103,7 @@ const projects = [
     id: 11,
     title: "QR Code Scanner",
     description: "QR code scanner with link redirection and sharing.",
-    category: "flutter",
+    category: ["flutter"],
     image: "qr-code.jpg",
     tags: ["Flutter", "Dart", "QR Scanner"],
     githubLink: "https://github.com/Devansh176/QR_CodeScanner.git",
@@ -113,7 +113,7 @@ const projects = [
     id: 12,
     title: "Student Profile",
     description: "Student profile app for saving and retrieving student details.",
-    category: "flutter",
+    category: ["flutter"],
     image: "profile.png",
     tags: ["Flutter", "Dart", "Spring Boot"],
     githubLink: "https://github.com/Devansh176/Studentprofile",
@@ -122,7 +122,7 @@ const projects = [
     id: 13,
     title: "User Task Management System",
     description: "Task manager with Firebase auth and real-time CRUD.",
-    category: "flutter",
+    category: ["flutter", "backend"],
     image: "i8.webp",
     tags: ["Flutter", "Firebase", "Spring Boot"],
     githubLink: "https://github.com/Devansh176/GDG_App.git",
@@ -131,12 +131,15 @@ const projects = [
 ];
 
 const ProjectsSection = () => {
-  const categories = ["all", ...new Set(projects.map(project => project.category))];
+  // Flatten all categories from projects and remove duplicates
+  const allCategories = projects.flatMap(project => project.category);
+  const uniqueCategories = [...new Set(allCategories)];
+  const categories = ["all", ...uniqueCategories];
   const [activeTab, setActiveTab] = useState("all");
 
   const filteredProjects = activeTab === "all" 
     ? projects 
-    : projects.filter(project => project.category === activeTab);
+    : projects.filter(project => project.category.includes(activeTab));
 
   return (
     <section id="projects" className="bg-secondary/30 py-20">
@@ -181,9 +184,13 @@ const ProjectsSection = () => {
                     <CardHeader>
                       <div className="flex justify-between items-start">
                         <CardTitle>{project.title}</CardTitle>
-                        <Badge variant="outline" className="capitalize rounded-full">
-                          {project.category}
-                        </Badge>
+                        <div className="flex flex-wrap gap-1">
+                          {project.category.map((cat) => (
+                            <Badge key={cat} variant="outline" className="capitalize rounded-full text-xs">
+                              {cat}
+                            </Badge>
+                          ))}
+                        </div>
                       </div>
                       <CardDescription className="line-clamp-2">
                         {project.description}

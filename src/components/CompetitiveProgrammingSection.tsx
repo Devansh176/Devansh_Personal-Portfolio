@@ -1,3 +1,4 @@
+
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -9,7 +10,6 @@ const leetcodeData = [
   { name: 'Hard', value: 19, color: '#91cc75' },
 ];
 
-// Topic distribution data
 const topicData = [
   { name: 'Arrays', value: 143, color: '#5470c6' },
   { name: 'Strings', value: 56, color: '#f930a4' },
@@ -22,7 +22,6 @@ const topicData = [
   { name: 'DP', value: 24, color: '#fac858' },
 ];
 
-// Platform stats
 const platformStats = [
   { platform: 'LeetCode', problems: 315, rank: '333,157', rating: '1,587' },
   { platform: 'HackerRank', problems: 101, Hackos: '873', rating: '5⭐' },
@@ -31,7 +30,6 @@ const platformStats = [
   { platform: 'CodeForces', problems: 5,   rank: '12,065', rating: '611' }
 ];
 
-// Common topics to filter
 const commonTopics = [
   "Arrays", "Strings", "HashMap/Set", "Sorting", "Two Pointer", "DP", "Graphs", "Trees", 
   "Greedy", "BFS/DFS", "Stack", "Queue", "Database", "LinkedList", 
@@ -41,7 +39,7 @@ const commonTopics = [
 const RADIAN = Math.PI / 180;
 
 const renderCustomLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
-  const radius = innerRadius + (outerRadius - innerRadius) * 1.2;
+  const radius = innerRadius + (outerRadius - innerRadius) * 1.3;
   const x = cx + radius * Math.cos(-midAngle * RADIAN);
   const y = cy + radius * Math.sin(-midAngle * RADIAN);
 
@@ -52,11 +50,37 @@ const renderCustomLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent
       fill="currentColor"
       textAnchor={x > cx ? 'start' : 'end'}
       dominantBaseline="central"
-      fontSize={12}
+      fontSize={13}
+      fontWeight={500}
+      className="drop-shadow-sm"
     >
       {`${topicData[index].name} ${(percent * 100).toFixed(0)}%`}
     </text>
   );
+};
+
+const CustomTooltip = ({ active, payload }) => {
+  if (active && payload && payload.length) {
+    const data = payload[0];
+    return (
+      <div className="bg-background/95 backdrop-blur-md border border-border/50 rounded-xl shadow-xl p-4 min-w-[140px]">
+        <div className="flex items-center gap-3">
+          <div 
+            className="w-4 h-4 rounded-full shadow-md"
+            style={{ backgroundColor: data.payload.color }}
+          />
+          <div>
+            <p className="font-semibold text-foreground">{data.payload.name}</p>
+            <p className="text-sm text-muted-foreground">{data.value} problems</p>
+            <p className="text-xs text-primary font-medium">
+              {((data.value / topicData.reduce((sum, item) => sum + item.value, 0)) * 100).toFixed(1)}%
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  return null;
 };
 
 const CompetitiveProgrammingSection = () => {
@@ -68,57 +92,93 @@ const CompetitiveProgrammingSection = () => {
           My problem-solving journey across various competitive programming platforms.
         </p>
 
-        {/* Centered Card */}
+        {/* Enhanced Pie Chart Card */}
         <div className="flex justify-center mb-12">
-          <Card className="overflow-hidden border border-border/50 backdrop-blur-sm bg-card/30 w-full max-w-2xl">
-            <CardHeader className="bg-primary/5 border-b border-border/30">
-              <CardTitle>Topic Distribution</CardTitle>
-              <CardDescription>Problems solved by topic category</CardDescription>
+          <Card className="overflow-hidden border border-border/50 backdrop-blur-sm bg-card/40 w-full max-w-4xl shadow-lg">
+            <CardHeader className="bg-gradient-to-r from-primary/10 via-primary/5 to-transparent border-b border-border/30 pb-6">
+              <div className="text-center">
+                <CardTitle className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+                  Topic Distribution
+                </CardTitle>
+                <CardDescription className="text-base mt-2">
+                  Comprehensive breakdown of problems solved across different domains
+                </CardDescription>
+              </div>
             </CardHeader>
-            <CardContent className="flex flex-col items-center justify-center py-10">
-              <div className="w-full h-[300px] mb-6">
+            <CardContent className="flex flex-col items-center justify-center py-12">
+              <div className="w-full h-[400px] mb-8 relative">
                 <ResponsiveContainer width="100%" height="100%">
                   <PieChart>
+                    <defs>
+                      <filter id="glow">
+                        <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                        <feMerge> 
+                          <feMergeNode in="coloredBlur"/>
+                          <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                      </filter>
+                    </defs>
                     <Pie
                       data={topicData}
                       cx="50%"
                       cy="50%"
                       labelLine={false}
                       label={renderCustomLabel}
-                      outerRadius={100}
+                      outerRadius={130}
+                      innerRadius={45}
                       fill="#8884d8"
                       dataKey="value"
+                      stroke="rgba(255,255,255,0.2)"
+                      strokeWidth={2}
                     >
                       {topicData.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={entry.color} />
+                        <Cell 
+                          key={`cell-${index}`} 
+                          fill={entry.color}
+                          filter="url(#glow)"
+                          className="hover:opacity-80 transition-opacity duration-300 cursor-pointer"
+                        />
                       ))}
                     </Pie>
-                    <Tooltip
-                      contentStyle={{
-                        backgroundColor: 'rgba(30, 41, 59, 0.8)',
-                        borderColor: 'rgba(148, 163, 184, 0.2)',
-                        borderRadius: '8px',
-                        color: '#fff',
-                        backdropFilter: 'blur(8px)'
-                      }}
-                      formatter={(value) => [`${value} problems`, 'Count']}
-                    />
+                    <Tooltip content={<CustomTooltip />} />
                   </PieChart>
                 </ResponsiveContainer>
+                
+                {/* Center Statistics */}
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  <div className="text-center bg-background/80 backdrop-blur-sm rounded-full p-6 border border-border/30">
+                    <div className="text-3xl font-bold text-primary">
+                      {topicData.reduce((sum, item) => sum + item.value, 0)}
+                    </div>
+                    <div className="text-sm text-muted-foreground font-medium">
+                      Total Problems
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="flex flex-wrap justify-center gap-4 mt-2">
-                {topicData.map((entry) => (
-               <Badge
-               key={entry.name}
-               variant="outline"
-               className="rounded-full px-4 py-1 text-sm border-none"
-               style={{
-                 backgroundColor: `rgba(0, 0, 0, 0.05)`,
-                 color: entry.color
-               }}
-             >
-               {entry.name}
-             </Badge>               
+              
+              {/* Enhanced Legend */}
+              <div className="flex flex-wrap justify-center gap-3 mt-4 max-w-4xl">
+                {topicData.map((entry, index) => (
+                  <Badge
+                    key={entry.name}
+                    variant="outline"
+                    className="rounded-full px-4 py-2 text-sm border-2 hover:scale-105 transition-all duration-300 cursor-pointer shadow-sm"
+                    style={{
+                      borderColor: entry.color,
+                      backgroundColor: `${entry.color}15`,
+                      color: entry.color
+                    }}
+                  >
+                    <div className="flex items-center gap-2">
+                      <div 
+                        className="w-3 h-3 rounded-full shadow-sm"
+                        style={{ backgroundColor: entry.color }}
+                      />
+                      <span className="font-medium">{entry.name}</span>
+                      <span className="text-xs opacity-80">({entry.value})</span>
+                    </div>
+                  </Badge>               
                 ))}
               </div>
             </CardContent>
