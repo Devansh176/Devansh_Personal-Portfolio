@@ -191,7 +191,7 @@ const CompetitiveProgrammingSection = () => {
                   HackerRank SQL: 46 Problems
                 </Badge>
                 <Badge variant="secondary" className="rounded-full py-2 px-4 text-base">
-                  CodeChef SQL: 61 Problems
+                  CodeChef SQL: 55 Problems
                 </Badge>
               </div>
             </CardContent>
