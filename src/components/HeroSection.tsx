@@ -10,7 +10,7 @@ const HeroSection = () => {
             I am Devansh !!
           </h1>
           <p className="text-lg text-foreground/80 mb-8 max-w-2xl animate-fade-in" style={{ animationDelay: "0.4s" }}>
-          Third-year IT student at Ramdeobaba College of Engineering and Management, building robust software solutions and actively seeking opportunities to contribute to real-world development projects, expand my technical skill set, and drive innovation in software engineering.
+          Fourth-year IT student at Ramdeobaba College of Engineering and Management, building robust software solutions and actively seeking opportunities to contribute to real-world development projects, expand my technical skill set, and drive innovation in software engineering.
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center lg:justify-start animate-fade-in mb-6" style={{ animationDelay: "0.6s" }}>

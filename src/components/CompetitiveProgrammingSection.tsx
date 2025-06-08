@@ -140,7 +140,7 @@ const CompetitiveProgrammingSection = () => {
                         />
                       ))}
                     </Pie>
-                    <Tooltip content={<CustomTooltip />} />
+                    <Tooltip content={<CustomTooltip active={undefined} payload={undefined} />} />
                   </PieChart>
                 </ResponsiveContainer>
                 
