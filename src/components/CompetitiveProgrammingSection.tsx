@@ -11,14 +11,14 @@ const leetcodeData = [
 ];
 
 const topicData = [
-  { name: 'Arrays', value: 143, color: '#5470c6' },
+  { name: 'Arrays', value: 148, color: '#5470c6' },
   { name: 'Strings', value: 56, color: '#f930a4' },
-  { name: 'HashMap', value: 54, color: '#ee6666' },
+  { name: 'HashMap', value: 55, color: '#ee6666' },
   { name: 'Trees', value: 28, color: '#73c0de' },
   { name: 'Database', value: 115, color: '#91cc75' },
-  { name: 'Greedy', value: 29, color: '#3ba272' },
-  { name: 'Graph', value: 36, color: '#7F00FF' },
-  { name: 'BFS/DFS', value: 82, color: '#fc8452' },
+  { name: 'Greedy', value: 30, color: '#3ba272' },
+  { name: 'Graph', value: 40, color: '#7F00FF' },
+  { name: 'BFS/DFS', value: 84, color: '#fc8452' },
   { name: 'DP', value: 24, color: '#fac858' },
 ];
 
