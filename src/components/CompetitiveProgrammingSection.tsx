@@ -19,14 +19,14 @@ const topicData = [
   { name: 'Greedy', value: 30, color: '#3ba272' },
   { name: 'Graph', value: 40, color: '#7F00FF' },
   { name: 'BFS/DFS', value: 84, color: '#fc8452' },
-  { name: 'DP', value: 24, color: '#fac858' },
+  { name: 'DP', value: 25, color: '#fac858' },
 ];
 
 const platformStats = [
   { platform: 'LeetCode', problems: 321, rank: '333,157', rating: '1,587' },
   { platform: 'HackerRank', problems: 101, Hackos: '873', rating: '5⭐' },
   { platform: 'CodeChef', problems: 70, rank: '1,164', rating: '1322' },
-  { platform: 'GeeksForGeeks', problems: 40, rank: '411', rating: '-' },
+  { platform: 'GeeksForGeeks', problems: 41, rank: '411', rating: '-' },
   { platform: 'CodeForces', problems: 7,   rank: '12,065', rating: '611' }
 ];
 
