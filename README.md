@@ -1,73 +1,69 @@
-# Welcome to your Lovable project
+Personal Portfolio
+Live Site: https://your-vercel-domain.vercel.app/
+This is a modern, responsive developer portfolio website showcasing my work, skills, and experience.
 
-## Project info
+Project Overview
+This portfolio was initially scaffolded using Lovable and later customized and actively developed in Visual Studio Code using TypeScript. It is now deployed on Vercel for fast and reliable hosting.
 
-**URL**: https://lovable.dev/projects/c311cbd8-33d4-4d28-ae56-49d0ba030c5b
+Features
+Fully responsive design optimized for all devices
 
-## How can I edit this code?
+Built using React and TypeScript
 
-There are several ways of editing your application.
+Fast development and build powered by Vite
 
-**Use Lovable**
+Styled with Tailwind CSS and prebuilt components from shadcn/ui
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/c311cbd8-33d4-4d28-ae56-49d0ba030c5b) and start prompting.
+Showcases projects, contact form, and optional resume download
 
-Changes made via Lovable will be committed automatically to this repo.
+Smooth animations and clean navigation
 
-**Use your preferred IDE**
+Tech Stack
+React (for building UI)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+TypeScript (for type safety and maintainability)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Vite (for fast bundling and development)
 
-Follow these steps:
+Tailwind CSS (for styling)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+shadcn/ui (for consistent UI components)
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+How to Run Locally
+Make sure Node.js and npm are installed.
 
-# Step 3: Install the necessary dependencies.
-npm i
+Clone the repository:
+git clone https://github.com/your-username/your-portfolio-repo.git
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+Navigate to the project folder:
+cd your-portfolio-repo
+
+Install dependencies:
+npm install
+
+Run the development server:
 npm run dev
-```
 
-**Edit a file directly in GitHub**
+Deployment
+The project is hosted on Vercel.
+To deploy your own version:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Push the code to GitHub
 
-**Use GitHub Codespaces**
+Go to vercel.com, sign in with GitHub
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Import your repo and choose the correct framework (Vite + React)
 
-## What technologies are used for this project?
+Click Deploy
 
-This project is built with:
+Each push to the main branch will trigger an automatic redeploy.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Custom Domain
+To use a custom domain on Vercel:
 
-## How can I deploy this project?
+Go to your project settings on Vercel
 
-Simply open [Lovable](https://lovable.dev/projects/c311cbd8-33d4-4d28-ae56-49d0ba030c5b) and click on Share -> Publish.
+Open the "Domains" section
 
-## Can I connect a custom domain to my Lovable project?
+Add your domain and follow the DNS configuration steps
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
