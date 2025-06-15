@@ -35,7 +35,7 @@ const projects = [
   },
   {
     id: 4,
-    title: "Personal Finance Tracker",
+    title: "Personal Finance Tracker UI",
     description: "Track income, expenses, and predict SIP returns using Flutter and Spring Boot.",
     category: ["flutter"],
     image: "i5.webp",
