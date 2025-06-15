@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Menu, Code, Github, Linkedin, Mail, ExternalLink } from "lucide-react";
+import { Menu, Code, Github, Linkedin, Mail, ExternalLink, BookOpen } from "lucide-react";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 const navLinks = [
@@ -97,6 +97,15 @@ const Navbar = () => {
               <Linkedin className="h-4 w-4 text-primary" />
             </a>
             <a 
+              href="https://medium.com/@devanshdhopte"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors hover:scale-110 transition-transform duration-300"
+              aria-label="Medium"
+            >
+              <BookOpen className="h-4 w-4 text-primary" />
+            </a>
+            <a 
               href="https://mail.google.com/mail/?view=cm&fs=1&to=devanshdhopte@gmail.com" 
               target="_blank" 
               rel="noopener noreferrer"
@@ -157,6 +166,14 @@ const Navbar = () => {
                 className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
               >
                 <Linkedin className="h-4 w-4 text-primary" />
+              </a>
+              <a 
+                href="https://medium.com/@devanshdhopte"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
+              >
+                <BookOpen className="h-4 w-4 text-primary" />
               </a>
               <a 
                 href="mailto:devanshdhopte@gmail.com"
