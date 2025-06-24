@@ -11,22 +11,22 @@ const leetcodeData = [
 ];
 
 const topicData = [
-  { name: 'Arrays', value: 160, color: '#5470c6' },
-  { name: 'Strings', value: 56, color: '#f930a4' },
-  { name: 'HashMap', value: 55, color: '#ee6666' },
+  { name: 'Arrays', value: 168, color: '#5470c6' },
+  { name: 'Strings', value: 58, color: '#f930a4' },
+  { name: 'HashMap', value: 56, color: '#ee6666' },
   { name: 'Trees', value: 28, color: '#73c0de' },
   { name: 'Database', value: 115, color: '#91cc75' },
-  { name: 'Greedy', value: 30, color: '#3ba272' },
-  { name: 'Graph', value: 40, color: '#7F00FF' },
-  { name: 'BFS/DFS', value: 84, color: '#fc8452' },
-  { name: 'DP', value: 39, color: '#fac858' },
+  { name: 'Greedy', value: 31, color: '#3ba272' },
+  { name: 'Graph', value: 45, color: '#7F00FF' },
+  { name: 'BFS/DFS', value: 92, color: '#fc8452' },
+  { name: 'DP', value: 53, color: '#fac858' },
 ];
 
 const platformStats = [
-  { platform: 'LeetCode', problems: 329, rank: '333,157', rating: '1,518' },
-  { platform: 'HackerRank', problems: 101, Hackos: '873', rating: '5⭐' },
-  { platform: 'CodeChef', problems: 74, rank: '1,164', rating: '1126' },
-  { platform: 'GeeksForGeeks', problems: 45, rank: '411', rating: '-' },
+  { platform: 'LeetCode', problems: 337, rank: '333,157', rating: '1,518' },
+  { platform: 'HackerRank', problems: 103, Hackos: '873', rating: '5⭐' },
+  { platform: 'CodeChef', problems: 77, rank: '1,164', rating: '1126' },
+  { platform: 'GeeksForGeeks', problems: 64, rank: '411', rating: '-' },
   { platform: 'CodeForces', problems: 7,   rank: '12,065', rating: '611' }
 ];
 
