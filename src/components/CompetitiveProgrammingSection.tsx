@@ -27,7 +27,7 @@ const platformStats = [
   { platform: 'HackerRank', problems: 103, Hackos: '873', rating: '5⭐' },
   { platform: 'CodeChef', problems: 77, rank: '1,164', rating: '1126' },
   { platform: 'GeeksForGeeks', problems: 64, rank: '411', rating: '-' },
-  { platform: 'CodeForces', problems: 7,   rank: '12,065', rating: '611' }
+  { platform: 'CodeForces', problems: 7,   rank: '12,065', rating: '611' },
   { platform: 'Coding Ninjas', problems: 27,   rank: 'Weekly - 3rd', rating: '-' }
 ];
 
