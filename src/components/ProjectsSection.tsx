@@ -13,7 +13,7 @@ const projects = [
     category: ["iot/cps"],  
     image: "cps_pic.png",
     tags: ["Spring Boot", "Java", "ESP32", "PostgreSQL", "MQTT", "Kotlin"],
-    githubLink: "https://github.com/Abhinavan2004/Ensuring-Securing-in-CPS-for-Healthcare-Applications",
+    githubLink: "https://github.com/Devansh176/CPS_in_Healthcare.git",
   },
   {
     id: 2,
