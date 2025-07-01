@@ -3,32 +3,25 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsive
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
-// LeetCode problem data
-const leetcodeData = [
-  { name: 'Easy', value: 127, color: '#73c0de' },
-  { name: 'Medium', value: 169, color: '#5470c6' },
-  { name: 'Hard', value: 19, color: '#91cc75' },
-];
-
 const topicData = [
-  { name: 'Arrays', value: 168, color: '#5470c6' },
-  { name: 'Strings', value: 58, color: '#f930a4' },
-  { name: 'HashMap', value: 56, color: '#ee6666' },
+  { name: 'Arrays', value: 171, color: '#5470c6' },
+  { name: 'Strings', value: 64, color: '#f930a4' },
+  { name: 'HashMap', value: 57, color: '#ee6666' },
   { name: 'Trees', value: 28, color: '#73c0de' },
   { name: 'Database', value: 115, color: '#91cc75' },
   { name: 'Greedy', value: 31, color: '#3ba272' },
-  { name: 'Graph', value: 45, color: '#7F00FF' },
-  { name: 'BFS/DFS', value: 92, color: '#fc8452' },
-  { name: 'DP', value: 53, color: '#fac858' },
+  { name: 'Graph', value: 47, color: '#7F00FF' },
+  { name: 'BFS/DFS', value: 98, color: '#fc8452' },
+  { name: 'DP', value: 65, color: '#fac858' },
 ];
 
 const platformStats = [
-  { platform: 'LeetCode', problems: 337, rank: '333,157', rating: '1,518' },
+  { platform: 'LeetCode', problems: 345, rank: '333,157', rating: '1,518' },
   { platform: 'HackerRank', problems: 103, Hackos: '873', rating: '5⭐' },
-  { platform: 'CodeChef', problems: 77, rank: '1,164', rating: '1126' },
-  { platform: 'GeeksForGeeks', problems: 64, rank: '411', rating: '-' },
+  { platform: 'CodeChef', problems: 79, rank: '1,164', rating: '1126' },
+  { platform: 'GeeksForGeeks', problems: 72, rank: '411', rating: '-' },
   // { platform: 'CodeForces', problems: 7,   rank: '12,065', rating: '611' },
-  { platform: 'Code Studio', problems: 27,   rank: 'Weekly - 3rd', rating: '-' }
+  { platform: 'Code Studio', problems: 35, rank: 'Weekly - 3rd', rating: '-' }
 ];
 
 const commonTopics = [
