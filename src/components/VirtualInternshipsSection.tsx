@@ -14,16 +14,16 @@ const internships = [
       "Completed practical tasks in designing a simple, scalable, hosting architecture using AWS services and cloud computing principles."
   },
   {
-    name: "Solutions Architecture Job Simulation",
-    issuer: "AWS (via Forage)",
+    name: "Cyber Job Simulation",
+    issuer: "Delloite (via Forage)", 
     date: "June 2025",
     url: "https://drive.google.com/file/d/13veBSnEwK6zb2aDDT9FjJb7529bjpQWd/view?usp=sharing",
-    skills: ["AWS", "Solutions Architecture", "Cloud Design"],
+    skills: ["Cyber Security", "Computer Networks", "Log Inspection, Web Security"],
     description:
-      "Completed practical tasks in designing a simple, scalable, hosting architecture using AWS services and cloud computing principles."
+      "Completed practical cybersecurity tasks focusing on threat analysis, security protocols, and cyber risk management strategies."
   },
   {
-    name: "Cybersecurity Virtual Internship",
+    name: "Cybersecurity Virtual Internship",       
     issuer: "Palo Alto Networks",
     date: "March 2024",
     url: "https://drive.google.com/file/d/19Bny8fzvdR7idwk92yzzCH_JlQrWIpKl/view?usp=sharing",
