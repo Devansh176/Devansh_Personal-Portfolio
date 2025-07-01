@@ -33,10 +33,10 @@ const internships = [
   },
   {
     name: "Solutions Architecture Job Simulation",
-    issuer: "AWS (via Forage)", 
-    date: "June 2025",
-    url: "/lovable-uploads/d380d7fb-f74d-4a73-a87c-5ac3ab51651f.png",
-    skills: ["AWS", "Solutions Architecture", "Cloud Design"],
+    issuer: "AWS (via Forage)",
+    date: "June 29th, 2025",
+    url: "/lovable-uploads/c893a5df-8353-4db1-9415-531e5c9dd4be.png",
+    skills: ["AWS", "Solutions Architecture", "Hosting Architecture"],
     description:
       "Completed practical tasks in designing a simple, scalable, hosting architecture using AWS services and cloud computing principles."
   }
