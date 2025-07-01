@@ -5,7 +5,6 @@ import { ExternalLink } from "lucide-react";
 
 const internships = [
   {
-<<<<<<< HEAD
     name: "Solutions Architecture Job Simulation",
     issuer: "AWS (via Forage)", 
     date: "June 2025",
@@ -25,9 +24,6 @@ const internships = [
   },
   {
     name: "Cybersecurity Virtual Internship",       
-=======
-    name: "Cybersecurity Virtual Internship",
->>>>>>> 58d1154d24ee7ca06fd38f66ee8edfc6efea4dec
     issuer: "Palo Alto Networks",
     date: "March 2024",
     url: "https://drive.google.com/file/d/19Bny8fzvdR7idwk92yzzCH_JlQrWIpKl/view?usp=sharing",
@@ -44,24 +40,6 @@ const internships = [
     description:
       "Built hands-on Android app prototypes using Kotlin and Android Studio. Learned app lifecycle, UI/UX design, and publishing essentials."
   },
-  {
-    name: "Cyber Job Simulation",
-    issuer: "Deloitte (via Forage)",
-    date: "June 26th, 2025",
-    url: "/lovable-uploads/a6607cbf-5968-4c1d-8258-9d27630ad677.png",
-    skills: ["Cybersecurity", "Cyber Security", "Risk Assessment"],
-    description:
-      "Completed practical cybersecurity tasks focusing on threat analysis, security protocols, and cyber risk management strategies."
-  },
-  {
-    name: "Solutions Architecture Job Simulation",
-    issuer: "AWS (via Forage)",
-    date: "June 29th, 2025",
-    url: "/lovable-uploads/c893a5df-8353-4db1-9415-531e5c9dd4be.png",
-    skills: ["AWS", "Solutions Architecture", "Hosting Architecture"],
-    description:
-      "Completed practical tasks in designing a simple, scalable, hosting architecture using AWS services and cloud computing principles."
-  }
 ];
 
 const VirtualInternshipsSection = () => {
