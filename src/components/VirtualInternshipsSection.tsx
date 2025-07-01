@@ -5,24 +5,6 @@ import { ExternalLink } from "lucide-react";
 
 const internships = [
   {
-    name: "Solutions Architecture Job Simulation",
-    issuer: "AWS (via Forage)", 
-    date: "June 2025",
-    url: "https://drive.google.com/file/d/1l8L3sLMCAc9yXG0WknFqLJNnJ1rdVmQK/view?usp=sharing",
-    skills: ["AWS", "Solutions Architecture", "Cloud Design"],
-    description:
-      "Completed practical tasks in designing a simple, scalable, hosting architecture using AWS services and cloud computing principles."
-  },
-  {
-    name: "Solutions Architecture Job Simulation",
-    issuer: "AWS (via Forage)",
-    date: "June 2025",
-    url: "https://drive.google.com/file/d/13veBSnEwK6zb2aDDT9FjJb7529bjpQWd/view?usp=sharing",
-    skills: ["AWS", "Solutions Architecture", "Cloud Design"],
-    description:
-      "Completed practical tasks in designing a simple, scalable, hosting architecture using AWS services and cloud computing principles."
-  },
-  {
     name: "Cybersecurity Virtual Internship",
     issuer: "Palo Alto Networks",
     date: "March 2024",
@@ -40,6 +22,24 @@ const internships = [
     description:
       "Built hands-on Android app prototypes using Kotlin and Android Studio. Learned app lifecycle, UI/UX design, and publishing essentials."
   },
+  {
+    name: "Cyber Job Simulation",
+    issuer: "Deloitte (via Forage)",
+    date: "June 26th, 2025",
+    url: "/lovable-uploads/a6607cbf-5968-4c1d-8258-9d27630ad677.png",
+    skills: ["Cybersecurity", "Cyber Security", "Risk Assessment"],
+    description:
+      "Completed practical cybersecurity tasks focusing on threat analysis, security protocols, and cyber risk management strategies."
+  },
+  {
+    name: "Solutions Architecture Job Simulation",
+    issuer: "AWS (via Forage)",
+    date: "June 29th, 2025",
+    url: "/lovable-uploads/c893a5df-8353-4db1-9415-531e5c9dd4be.png",
+    skills: ["AWS", "Solutions Architecture", "Hosting Architecture"],
+    description:
+      "Completed practical tasks in designing a simple, scalable, hosting architecture using AWS services and cloud computing principles."
+  }
 ];
 
 const VirtualInternshipsSection = () => {
