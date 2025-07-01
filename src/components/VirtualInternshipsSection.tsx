@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink } from "lucide-react";
@@ -20,6 +21,24 @@ const internships = [
     skills: ["Android", "Kotlin", "UI Design"],
     description:
       "Built hands-on Android app prototypes using Kotlin and Android Studio. Learned app lifecycle, UI/UX design, and publishing essentials."
+  },
+  {
+    name: "Solutions Architecture Job Simulation",
+    issuer: "AWS (via Forage)",
+    date: "June 2025",
+    url: "/lovable-uploads/c4b68084-01ed-48d4-9948-314e1bd14bab.png",
+    skills: ["AWS", "Solutions Architecture", "Cloud Design"],
+    description:
+      "Completed practical tasks in designing a simple, scalable, hosting architecture using AWS services and cloud computing principles."
+  },
+  {
+    name: "Solutions Architecture Job Simulation",
+    issuer: "AWS (via Forage)", 
+    date: "June 2025",
+    url: "/lovable-uploads/d380d7fb-f74d-4a73-a87c-5ac3ab51651f.png",
+    skills: ["AWS", "Solutions Architecture", "Cloud Design"],
+    description:
+      "Completed practical tasks in designing a simple, scalable, hosting architecture using AWS services and cloud computing principles."
   }
 ];
 
