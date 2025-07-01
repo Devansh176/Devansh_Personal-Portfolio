@@ -5,6 +5,24 @@ import { ExternalLink } from "lucide-react";
 
 const internships = [
   {
+    name: "Solutions Architecture Job Simulation",
+    issuer: "AWS (via Forage)", 
+    date: "June 2025",
+    url: "https://drive.google.com/file/d/1l8L3sLMCAc9yXG0WknFqLJNnJ1rdVmQK/view?usp=sharing",
+    skills: ["AWS", "Solutions Architecture", "Cloud Design"],
+    description:
+      "Completed practical tasks in designing a simple, scalable, hosting architecture using AWS services and cloud computing principles."
+  },
+  {
+    name: "Solutions Architecture Job Simulation",
+    issuer: "AWS (via Forage)",
+    date: "June 2025",
+    url: "https://drive.google.com/file/d/13veBSnEwK6zb2aDDT9FjJb7529bjpQWd/view?usp=sharing",
+    skills: ["AWS", "Solutions Architecture", "Cloud Design"],
+    description:
+      "Completed practical tasks in designing a simple, scalable, hosting architecture using AWS services and cloud computing principles."
+  },
+  {
     name: "Cybersecurity Virtual Internship",
     issuer: "Palo Alto Networks",
     date: "March 2024",
@@ -22,24 +40,6 @@ const internships = [
     description:
       "Built hands-on Android app prototypes using Kotlin and Android Studio. Learned app lifecycle, UI/UX design, and publishing essentials."
   },
-  {
-    name: "Solutions Architecture Job Simulation",
-    issuer: "AWS (via Forage)",
-    date: "June 2025",
-    url: "/lovable-uploads/c4b68084-01ed-48d4-9948-314e1bd14bab.png",
-    skills: ["AWS", "Solutions Architecture", "Cloud Design"],
-    description:
-      "Completed practical tasks in designing a simple, scalable, hosting architecture using AWS services and cloud computing principles."
-  },
-  {
-    name: "Solutions Architecture Job Simulation",
-    issuer: "AWS (via Forage)", 
-    date: "June 2025",
-    url: "/lovable-uploads/d380d7fb-f74d-4a73-a87c-5ac3ab51651f.png",
-    skills: ["AWS", "Solutions Architecture", "Cloud Design"],
-    description:
-      "Completed practical tasks in designing a simple, scalable, hosting architecture using AWS services and cloud computing principles."
-  }
 ];
 
 const VirtualInternshipsSection = () => {
