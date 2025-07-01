@@ -23,13 +23,13 @@ const internships = [
       "Built hands-on Android app prototypes using Kotlin and Android Studio. Learned app lifecycle, UI/UX design, and publishing essentials."
   },
   {
-    name: "Solutions Architecture Job Simulation",
-    issuer: "AWS (via Forage)",
-    date: "June 2025",
-    url: "/lovable-uploads/c4b68084-01ed-48d4-9948-314e1bd14bab.png",
-    skills: ["AWS", "Solutions Architecture", "Cloud Design"],
+    name: "Cyber Job Simulation",
+    issuer: "Deloitte (via Forage)",
+    date: "June 26th, 2025",
+    url: "/lovable-uploads/a6607cbf-5968-4c1d-8258-9d27630ad677.png",
+    skills: ["Cybersecurity", "Cyber Security", "Risk Assessment"],
     description:
-      "Completed practical tasks in designing a simple, scalable, hosting architecture using AWS services and cloud computing principles."
+      "Completed practical cybersecurity tasks focusing on threat analysis, security protocols, and cyber risk management strategies."
   },
   {
     name: "Solutions Architecture Job Simulation",
