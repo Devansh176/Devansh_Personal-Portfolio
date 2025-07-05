@@ -33,17 +33,17 @@ const projects = [
     tags: ["Python", "AWS", "LLM", "S3", "RDS"],
     githubLink: "https://github.com/Devansh176/Data-Insights-Pipeline.git",
   },
+  // {
+  //   id: 4,
+  //   title: "Personal Finance Tracker UI",
+  //   description: "Track income, expenses, and predict SIP returns using Flutter and Spring Boot.",
+  //   category: ["flutter"],
+  //   image: "i5.webp",
+  //   tags: ["Flutter", "Dart", "Spring Boot", "Java", "REST API"],
+  //   githubLink: "https://github.com/Devansh176/FinancialAdvisioryFlutter.git",
+  // },
   {
     id: 4,
-    title: "Personal Finance Tracker UI",
-    description: "Track income, expenses, and predict SIP returns using Flutter and Spring Boot.",
-    category: ["flutter"],
-    image: "i5.webp",
-    tags: ["Flutter", "Dart", "Spring Boot", "Java", "REST API"],
-    githubLink: "https://github.com/Devansh176/FinancialAdvisioryFlutter.git",
-  },
-  {
-    id: 5,
     title: "Movie App (Cineflex)",
     description: "Displays movies, trailers, and handles bookings with bilingual support.",
     category: ["flutter"],
@@ -53,7 +53,7 @@ const projects = [
     liveLink: "https://appetize.io/app/b_jvn5k744ajmjpw7evezrnewj64"
   },
   {
-    id: 6,
+    id: 5,
     title: "Wallpaper App (Wallviz)",
     description: "High-quality image search and wallpaper downloads using Pexels & Unsplash APIs.",
     category: ["flutter"],
@@ -63,7 +63,7 @@ const projects = [
     liveLink: "https://appetize.io/app/b_jidfd4hp7dmycywun77ak7hpf4"
   },
   {
-    id: 7,
+    id: 6,
     title: "Facial Expression Detection",
     description: "Real-time emotion recognition using Flutter and TensorFlow Lite.",
     category: ["ml", "flutter"],
@@ -72,7 +72,7 @@ const projects = [
     githubLink: "https://github.com/Devansh176/Face_Expression_Detection.git",
   },
   {
-    id: 8,
+    id: 7,
     title: "Secure Backend",
     description: "Secure user auth API with email verification and JWT using Express & MongoDB.",
     category: ["backend", "mern"],
@@ -81,7 +81,7 @@ const projects = [
     githubLink: "https://github.com/Devansh176/Secure_Backend",
   },
   {
-    id: 9,
+    id: 8,
     title: "Url Shortner App",
     description: "Shorten and track URLs with real-time redirection using the MERN stack.",
     category: ["backend", "mern"],
@@ -90,7 +90,7 @@ const projects = [
     githubLink: "https://github.com/Devansh176/Url_shortner",
   },
   {
-    id: 10,
+    id: 9,
     title: "Todo List",
     description: "To-do app with Provider, SQLite, and due date tracking.",
     category: ["flutter"],
@@ -100,7 +100,7 @@ const projects = [
     liveLink: "https://appetize.io/app/b_fhcdhygsl37w37n4lbr545pfjq"
   },
   {
-    id: 11,
+    id: 10,
     title: "QR Code Scanner",
     description: "QR code scanner with link redirection and sharing.",
     category: ["flutter"],
@@ -110,7 +110,7 @@ const projects = [
     liveLink: "https://appetize.io/app/b_dqcoawru7lnh6kuinjhbkpvnhe"
   },
   {
-    id: 12,
+    id: 11,
     title: "Student Profile",
     description: "Student profile app for saving and retrieving student details.",
     category: ["flutter"],
@@ -119,7 +119,7 @@ const projects = [
     githubLink: "https://github.com/Devansh176/Studentprofile",
   },
   {
-    id: 13,
+    id: 12,
     title: "User Task Management System",
     description: "Task manager with Firebase auth and real-time CRUD.",
     category: ["flutter", "backend"],
