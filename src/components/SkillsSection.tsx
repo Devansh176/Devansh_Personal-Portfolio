@@ -10,9 +10,6 @@ const skillCategories = [
       { name: "Dart", level: "Intermediate" },
       { name: "C", level: "Intermediate" },
       { name: "Python", level: "Intermediate" },
-      { name: "Kotlin", level: "Intermediate" },
-      { name: "JavaScript", level: "Beginner" },
-      { name: "TypeScript", level: "Beginner" }
     ]
   },
   {
@@ -21,8 +18,6 @@ const skillCategories = [
     skills: [
       { name: "Flutter", level: "Intermediate" },
       { name: "Android SDK", level: "Intermediate" },
-      { name: "Jetpack", level: "Beginner" },
-      { name: "Teachable Machine", level: "Beginner" }
     ]
   },
   {
@@ -32,15 +27,9 @@ const skillCategories = [
       { name: "Spring Boot", level: "Intermediate" },
       { name: "REST APIs", level: "Advanced" },
       { name: "Firebase", level: "Intermediate" },
-      { name: "ExpressJs", level: "Beginner" },
-      { name: "NodeJS", level: "Beginner" },
       { name: "AWS", level: "Intermediate" },
       { name: "Docker", level: "Beginner" },
-      { name: "Google Cloud", level: "Beginner" },
-      { name: "MQTT", level: "Intermediate" },
       { name: "CI/CD", level: "Beginner" },
-      { name: "CloudWatch", level: "Beginner" },
-      { name: "Greengrass", level: "Beginner" }
     ]
   },
   {
@@ -49,14 +38,9 @@ const skillCategories = [
     skills: [
       { name: "PostgreSQL", level: "Intermediate" },
       { name: "MySQL", level: "Intermediate" },
-      { name: "MongoDB", level: "Beginner" },
-      { name: "Sqflite", level: "Intermediate" },
       { name: "SQLite", level: "Intermediate" },
-      { name: "pgAdmin", level: "Beginner" },
       { name: "Postman", level: "Intermediate" },
-      { name: "Android Studio", level: "Advanced" },
-      { name: "IntelliJ IDEA", level: "Intermediate" },
-      { name: "GitHub", level: "Advanced" },
+      { name: "GitHub", level: "Intermediate" },
       { name: "ESP32", level: "Intermediate" }
     ]
   },
@@ -71,8 +55,6 @@ const skillCategories = [
       { name: "Linux", level: "Intermediate" },
       { name: "Operating Systems", level: "Intermediate" },
       { name: "Computer Networks", level: "Intermediate" },
-      { name: "Machine Learning", level: "Beginner" },
-      { name: "AI", level: "Beginner" }
     ]
   },
   {
