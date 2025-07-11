@@ -16,12 +16,12 @@ const topicData = [
 ];
 
 const platformStats = [
-  { platform: 'LeetCode', problems: 345, rank: '333,157', rating: '1,518' },
+  { platform: 'LeetCode', problems: 362, rank: '333,157', rating: '1,518' },
   { platform: 'HackerRank', problems: 103, Hackos: '873', rating: '5⭐' },
-  { platform: 'CodeChef', problems: 79, rank: '1,164', rating: '1126' },
-  { platform: 'GeeksForGeeks', problems: 72, rank: '411', rating: '-' },
+  { platform: 'CodeChef', problems: 82, rank: '1,164', rating: '1126' },
+  { platform: 'GeeksForGeeks', problems: 89, rank: '411', rating: '-' },
   // { platform: 'CodeForces', problems: 7,   rank: '12,065', rating: '611' },
-  { platform: 'Code Studio', problems: 35, rank: 'Weekly - 3rd', rating: '-' }
+  { platform: 'Code Studio', problems: 57, rank: 'Weekly - 3rd', rating: '-' }
 ];
 
 const commonTopics = [
