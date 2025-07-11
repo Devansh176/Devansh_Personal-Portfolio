@@ -4,15 +4,15 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 
 const topicData = [
-  { name: 'Arrays', value: 171, color: '#5470c6' },
-  { name: 'Strings', value: 64, color: '#f930a4' },
-  { name: 'HashMap', value: 57, color: '#ee6666' },
-  { name: 'Trees', value: 28, color: '#73c0de' },
+  { name: 'Arrays', value: 184, color: '#5470c6' },
+  { name: 'Strings', value: 71, color: '#f930a4' },
+  { name: 'HashMap', value: 63, color: '#ee6666' },
+  { name: 'Trees', value: 30, color: '#73c0de' },
   { name: 'Database', value: 115, color: '#91cc75' },
-  { name: 'Greedy', value: 31, color: '#3ba272' },
-  { name: 'Graph', value: 47, color: '#7F00FF' },
-  { name: 'BFS/DFS', value: 98, color: '#fc8452' },
-  { name: 'DP', value: 65, color: '#fac858' },
+  { name: 'Greedy', value: 36, color: '#3ba272' },
+  { name: 'Graph', value: 48, color: '#7F00FF' },
+  { name: 'BFS/DFS', value: 104, color: '#fc8452' },
+  { name: 'DP', value: 70, color: '#fac858' },
 ];
 
 const platformStats = [
