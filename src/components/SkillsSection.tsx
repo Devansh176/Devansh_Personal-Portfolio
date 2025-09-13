@@ -8,7 +8,6 @@ const skillCategories = [
     skills: [
       { name: "Java", level: "Advanced" },
       { name: "Dart", level: "Intermediate" },
-      { name: "C", level: "Intermediate" },
       { name: "Python", level: "Intermediate" },
     ]
   },
@@ -38,10 +37,8 @@ const skillCategories = [
     skills: [
       { name: "PostgreSQL", level: "Intermediate" },
       { name: "MySQL", level: "Intermediate" },
-      { name: "SQLite", level: "Intermediate" },
       { name: "Postman", level: "Intermediate" },
-      { name: "GitHub", level: "Intermediate" },
-      { name: "ESP32", level: "Intermediate" }
+      { name: "GitHub", level: "Intermediate" }
     ]
   },
   {

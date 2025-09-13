@@ -7,7 +7,7 @@ const CredentialsSection = () => {
   return (
     <section id="credentials" className="py-20 bg-gradient-to-r from-primary/5 to-secondary/10">
       <div className="section-container">
-        <h2 className="section-title text-center mb-4">Professional Credentials</h2>
+        <h2 className="section-title text-center mb-4">AWS Certification</h2>
         <p className="text-center text-foreground/80 mb-12 max-w-3xl mx-auto">
           Certified cloud professional with proven expertise in AWS cloud technologies and infrastructure.
         </p>
@@ -18,8 +18,8 @@ const CredentialsSection = () => {
               <div className="flex justify-center mb-4">
                 <div className="relative">
                   <img 
-                    src="/aws-certificate.png" 
-                    alt="AWS Certified Cloud Practitioner Certificate" 
+                    src="/my-aws-certificate.png" 
+                    alt="AWS Certified Cloud Practitioner Certificate - Devansh Dhopte" 
                     className="max-w-md w-full h-auto rounded-lg shadow-lg"
                   />
                   <div className="absolute -top-2 -right-2 bg-primary text-white rounded-full p-2">
@@ -43,22 +43,9 @@ const CredentialsSection = () => {
             </CardHeader>
             
             <CardContent className="text-center space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-background/50 rounded-lg p-4">
-                  <h3 className="font-semibold text-primary mb-2">Issue Date</h3>
-                  <p className="text-foreground/80">September 12, 2025</p>
-                </div>
-                <div className="bg-background/50 rounded-lg p-4">
-                  <h3 className="font-semibold text-primary mb-2">Expiration Date</h3>
-                  <p className="text-foreground/80">September 12, 2028</p>
-                </div>
-              </div>
-              
-              <div className="bg-background/50 rounded-lg p-4">
-                <h3 className="font-semibold text-primary mb-2">Validation Number</h3>
-                <p className="text-sm text-foreground/70 font-mono">
-                  0ae2ac5f43ff42889dabd8252bfbe72d
-                </p>
+              <div className="bg-background/50 rounded-lg p-4 max-w-sm mx-auto">
+                <h3 className="font-semibold text-primary mb-2">Certification Validity</h3>
+                <p className="text-foreground/80">Valid until 2028</p>
               </div>
 
               <div className="space-y-3">

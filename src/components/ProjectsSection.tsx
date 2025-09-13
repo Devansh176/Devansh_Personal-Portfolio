@@ -10,7 +10,7 @@ const projects = [
     id: 1,
     title: "Hospital Management System",
     description: "Comprehensive hospital management system built with Spring Boot, featuring patient management, appointment scheduling, and medical records.",
-    category: ["spring-boot", "healthcare"],  
+    category: ["spring-boot"],  
     image: "cps_pic.png",
     tags: ["Spring Boot", "Java", "MySQL", "REST API", "Healthcare"],
     githubLink: "https://github.com/Devansh176/Hospital_Management_System",
@@ -19,7 +19,7 @@ const projects = [
     id: 2,
     title: "Payment Service",
     description: "Enterprise payment service with Spring Boot managing clients, payments, addresses, and products with scalable architecture.",
-    category: ["spring-boot", "fintech"],
+    category: ["spring-boot"],
     image: "mongo.png",
     tags: ["Spring Boot", "Java", "Payment Gateway", "CRUD", "Microservices"],
     githubLink: "https://github.com/Devansh176/Payment_Service",
@@ -28,7 +28,7 @@ const projects = [
     id: 3,
     title: "Cyber-Physical Health Monitoring System (CPS)",
     description: "Real-time health data monitoring using Spring Boot, PostgreSQL, and ESP32 via MQTT.",
-    category: ["iot/cps", "healthcare"],  
+    category: ["iot/cps"],  
     image: "cps_pic.png",
     tags: ["Spring Boot", "Java", "ESP32", "PostgreSQL", "MQTT", "Kotlin"],
     githubLink: "https://github.com/Devansh176/CPS_in_Healthcare.git",
@@ -79,16 +79,6 @@ const projects = [
     image: "i7.jfif",
     tags: ["Flutter", "TensorFlow Lite", "Teachable Machine"],
     githubLink: "https://github.com/Devansh176/Face_Expression_Detection.git",
-  },
-  {
-    id: 9,
-    title: "User Task Management System",
-    description: "Task manager with Firebase auth and real-time CRUD operations.",
-    category: ["flutter", "backend"],
-    image: "i8.webp",
-    tags: ["Flutter", "Firebase", "Spring Boot"],
-    githubLink: "https://github.com/Devansh176/GDG_App.git",
-    liveLink: "https://appetize.io/app/b_omdfosuibokiqbyqi73ot42zaq"
   },
 ];
 
