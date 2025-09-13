@@ -7,7 +7,7 @@ const HeroSection = () => {
       <div className="section-container flex flex-col items-center text-center lg:text-left lg:flex-row lg:justify-between">
         <div className="lg:max-w-2xl">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary-glow bg-clip-text text-transparent animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            Devansh P. Dhopte
+            I am Devansh!
           </h1>
           <div className="flex items-center justify-center lg:justify-start mb-4 animate-fade-in" style={{ animationDelay: "0.3s" }}>
             <div className="brand-card rounded-full px-4 py-2 flex items-center gap-2">
