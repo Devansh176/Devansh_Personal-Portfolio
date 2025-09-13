@@ -9,8 +9,14 @@ const HeroSection = () => {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-primary animate-fade-in" style={{ animationDelay: "0.2s" }}>
             I am Devansh !!
           </h1>
+          <div className="flex items-center justify-center lg:justify-start mb-4 animate-fade-in" style={{ animationDelay: "0.3s" }}>
+            <div className="bg-primary/10 border border-primary/20 rounded-full px-4 py-2 flex items-center gap-2">
+              <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+              <span className="text-primary font-semibold text-sm">AWS Certified Cloud Practitioner</span>
+            </div>
+          </div>
           <p className="text-lg text-foreground/80 mb-8 max-w-2xl animate-fade-in" style={{ animationDelay: "0.4s" }}>
-          Fourth-year IT student at Ramdeobaba College of Engineering and Management, building robust software solutions and actively seeking opportunities to contribute to real-world development projects, expand my technical skill set, and drive innovation in software engineering.
+          AWS Certified Cloud Practitioner and fourth-year IT student at Ramdeobaba College of Engineering and Management, specializing in cloud solutions, enterprise applications, and innovative software development.
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center lg:justify-start animate-fade-in mb-6" style={{ animationDelay: "0.6s" }}>

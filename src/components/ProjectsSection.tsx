@@ -8,15 +8,33 @@ import { ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
+    title: "Hospital Management System",
+    description: "Comprehensive hospital management system built with Spring Boot, featuring patient management, appointment scheduling, and medical records.",
+    category: ["spring-boot", "healthcare"],  
+    image: "cps_pic.png",
+    tags: ["Spring Boot", "Java", "MySQL", "REST API", "Healthcare"],
+    githubLink: "https://github.com/Devansh176/Hospital_Management_System",
+  },
+  {
+    id: 2,
+    title: "Payment Service",
+    description: "Enterprise payment service with Spring Boot managing clients, payments, addresses, and products with scalable architecture.",
+    category: ["spring-boot", "fintech"],
+    image: "mongo.png",
+    tags: ["Spring Boot", "Java", "Payment Gateway", "CRUD", "Microservices"],
+    githubLink: "https://github.com/Devansh176/Payment_Service",
+  },
+  {
+    id: 3,
     title: "Cyber-Physical Health Monitoring System (CPS)",
     description: "Real-time health data monitoring using Spring Boot, PostgreSQL, and ESP32 via MQTT.",
-    category: ["iot/cps"],  
+    category: ["iot/cps", "healthcare"],  
     image: "cps_pic.png",
     tags: ["Spring Boot", "Java", "ESP32", "PostgreSQL", "MQTT", "Kotlin"],
     githubLink: "https://github.com/Devansh176/CPS_in_Healthcare.git",
   },
   {
-    id: 2,
+    id: 4,
     title: "Face Detection & Recognition",
     description: "Dockerized ML model for face recognition with AWS Greengrass, MQTT, and SQS.",
     category: ["ml", "cloud"],
@@ -25,7 +43,7 @@ const projects = [
     githubLink: "https://github.com/Devansh176/AWS-Face-Recognition.git",
   },
   {
-    id: 3,
+    id: 5,
     title: "Data Insights Pipeline",
     description: "Automated metadata detection and insights with Python, AWS RDS, and LLMs.",
     category: ["cloud"],
@@ -33,17 +51,8 @@ const projects = [
     tags: ["Python", "AWS", "LLM", "S3", "RDS"],
     githubLink: "https://github.com/Devansh176/Data-Insights-Pipeline.git",
   },
-  // {
-  //   id: 4,
-  //   title: "Personal Finance Tracker UI",
-  //   description: "Track income, expenses, and predict SIP returns using Flutter and Spring Boot.",
-  //   category: ["flutter"],
-  //   image: "i5.webp",
-  //   tags: ["Flutter", "Dart", "Spring Boot", "Java", "REST API"],
-  //   githubLink: "https://github.com/Devansh176/FinancialAdvisioryFlutter.git",
-  // },
   {
-    id: 4,
+    id: 6,
     title: "Movie App (Cineflex)",
     description: "Displays movies, trailers, and handles bookings with bilingual support.",
     category: ["flutter"],
@@ -53,7 +62,7 @@ const projects = [
     liveLink: "https://appetize.io/app/b_jvn5k744ajmjpw7evezrnewj64"
   },
   {
-    id: 5,
+    id: 7,
     title: "Wallpaper App (Wallviz)",
     description: "High-quality image search and wallpaper downloads using Pexels & Unsplash APIs.",
     category: ["flutter"],
@@ -63,7 +72,7 @@ const projects = [
     liveLink: "https://appetize.io/app/b_jidfd4hp7dmycywun77ak7hpf4"
   },
   {
-    id: 6,
+    id: 8,
     title: "Facial Expression Detection",
     description: "Real-time emotion recognition using Flutter and TensorFlow Lite.",
     category: ["ml", "flutter"],
@@ -72,56 +81,9 @@ const projects = [
     githubLink: "https://github.com/Devansh176/Face_Expression_Detection.git",
   },
   {
-    id: 7,
-    title: "Secure Backend",
-    description: "Secure user auth API with email verification and JWT using Express & MongoDB.",
-    category: ["backend", "mern"],
-    image: "mongo.png",
-    tags: ["Node.js", "Express.js", "MongoDB Atlas", "Nodemailer"],
-    githubLink: "https://github.com/Devansh176/Secure_Backend",
-  },
-  {
-    id: 8,
-    title: "Url Shortner App",
-    description: "Shorten and track URLs with real-time redirection using the MERN stack.",
-    category: ["backend", "mern"],
-    image: "url.jpg",
-    tags: ["Node.js", "Express.js", "MongoDB Atlas", "React.js", "Mongoose", "Axios"],
-    githubLink: "https://github.com/Devansh176/Url_shortner",
-  },
-  {
     id: 9,
-    title: "Todo List",
-    description: "To-do app with Provider, SQLite, and due date tracking.",
-    category: ["flutter"],
-    image: "todo.jpg",
-    tags: ["Flutter", "Dart", "SQLite"],
-    githubLink: "https://github.com/Devansh176/TodoList.git",
-    liveLink: "https://appetize.io/app/b_fhcdhygsl37w37n4lbr545pfjq"
-  },
-  {
-    id: 10,
-    title: "QR Code Scanner",
-    description: "QR code scanner with link redirection and sharing.",
-    category: ["flutter"],
-    image: "qr-code.jpg",
-    tags: ["Flutter", "Dart", "QR Scanner"],
-    githubLink: "https://github.com/Devansh176/QR_CodeScanner.git",
-    liveLink: "https://appetize.io/app/b_dqcoawru7lnh6kuinjhbkpvnhe"
-  },
-  {
-    id: 11,
-    title: "Student Profile",
-    description: "Student profile app for saving and retrieving student details.",
-    category: ["flutter"],
-    image: "profile.png",
-    tags: ["Flutter", "Dart", "Spring Boot"],
-    githubLink: "https://github.com/Devansh176/Studentprofile",
-  },
-  {
-    id: 12,
     title: "User Task Management System",
-    description: "Task manager with Firebase auth and real-time CRUD.",
+    description: "Task manager with Firebase auth and real-time CRUD operations.",
     category: ["flutter", "backend"],
     image: "i8.webp",
     tags: ["Flutter", "Firebase", "Spring Boot"],
@@ -146,7 +108,7 @@ const ProjectsSection = () => {
       <div className="section-container">
         <h2 className="section-title text-center">Projects</h2>
         <p className="text-center text-foreground/80 mb-12 max-w-3xl mx-auto">
-          Explore my projects across various domains including mobile apps, cloud systems, machine learning, and IoT.
+          Showcase of enterprise-grade applications across healthcare, fintech, cloud computing, mobile development, and IoT solutions.
         </p>
 
         <Tabs defaultValue="all" value={activeTab} onValueChange={setActiveTab} className="mb-12">
