@@ -16,6 +16,7 @@
 
     --primary: 79 39% 30%;
     --primary-foreground: 210 40% 98%;
+    --primary-glow: 79 45% 45%;
 
     --secondary: 79 39% 96.1%;
     --secondary-foreground: 79 39% 11.2%;
@@ -34,6 +35,15 @@
     --ring: 79 39% 50%;
 
     --radius: 0.5rem;
+
+    /* Professional gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--primary) / 0.05) 50%, hsl(var(--primary) / 0.1) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--primary) / 0.02) 100%);
+    
+    /* Professional shadows */
+    --shadow-brand: 0 4px 20px -4px hsl(var(--primary) / 0.15);
+    --shadow-glow: 0 0 30px hsl(var(--primary-glow) / 0.3);
 
     --sidebar-background: 79 39% 98%;
     --sidebar-foreground: 79 39% 26.1%;
@@ -57,6 +67,7 @@
 
     --primary: 79 30% 45%;
     --primary-foreground: 210 40% 98%;
+    --primary-glow: 79 35% 55%;
 
     --secondary: 79 25% 16%;
     --secondary-foreground: 79 10% 90%;
@@ -73,6 +84,15 @@
     --border: 79 25% 20%;
     --input: 79 25% 20%;
     --ring: 79 30% 45%;
+
+    /* Dark mode gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--primary) / 0.1) 50%, hsl(var(--primary) / 0.15) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--primary) / 0.05) 100%);
+    
+    /* Dark mode shadows */
+    --shadow-brand: 0 4px 20px -4px hsl(var(--primary) / 0.25);
+    --shadow-glow: 0 0 30px hsl(var(--primary-glow) / 0.4);
 
     --sidebar-background: 79 25% 10%;
     --sidebar-foreground: 79 10% 90%;
@@ -103,11 +123,31 @@
   }
   
   .section-title {
-    @apply text-3xl sm:text-4xl font-bold mb-8 text-primary;
+    @apply text-3xl sm:text-4xl font-bold mb-8 text-primary bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
   }
 
   .card-hover {
     @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+
+  .brand-card {
+    @apply bg-gradient-to-br from-card to-primary/5 border border-primary/20 shadow-lg hover:shadow-xl transition-all duration-300;
+  }
+
+  .brand-gradient {
+    background: var(--gradient-primary);
+  }
+
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .brand-shadow {
+    box-shadow: var(--shadow-brand);
+  }
+
+  .glow-effect {
+    box-shadow: var(--shadow-glow);
   }
 }
 

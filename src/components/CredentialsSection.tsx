@@ -43,11 +43,6 @@ const CredentialsSection = () => {
             </CardHeader>
             
             <CardContent className="text-center space-y-6">
-              <div className="bg-background/50 rounded-lg p-4 max-w-sm mx-auto">
-                <h3 className="font-semibold text-primary mb-2">Certification Validity</h3>
-                <p className="text-foreground/80">Valid until 2028</p>
-              </div>
-
               <div className="space-y-3">
                 <h3 className="font-semibold text-primary">Core Competencies</h3>
                 <div className="flex flex-wrap justify-center gap-2">
