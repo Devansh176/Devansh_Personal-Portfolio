@@ -11,7 +11,7 @@ const projects = [
     title: "Hospital Management System",
     description: "Comprehensive hospital management system built with Spring Boot, featuring patient management, appointment scheduling, and medical records.",
     category: ["spring-boot"],  
-    image: "cps_pic.png",
+    image: "HMS.png",
     tags: ["Spring Boot", "Java", "MySQL", "REST API", "Healthcare"],
     githubLink: "https://github.com/Devansh176/Hospital_Management_System",
   },

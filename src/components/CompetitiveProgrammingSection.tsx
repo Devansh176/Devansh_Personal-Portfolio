@@ -4,24 +4,24 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 
 const topicData = [
-  { name: 'Arrays', value: 184, color: '#5470c6' },
-  { name: 'Strings', value: 71, color: '#f930a4' },
-  { name: 'HashMap', value: 63, color: '#ee6666' },
-  { name: 'Trees', value: 30, color: '#73c0de' },
+  { name: 'Arrays', value: 212, color: '#5470c6' },
+  { name: 'Strings', value: 81, color: '#f930a4' },
+  { name: 'HashMap', value: 76, color: '#ee6666' },
+  { name: 'Trees', value: 35, color: '#73c0de' },
   { name: 'Database', value: 115, color: '#91cc75' },
-  { name: 'Greedy', value: 36, color: '#3ba272' },
-  { name: 'Graph', value: 48, color: '#7F00FF' },
-  { name: 'BFS/DFS', value: 104, color: '#fc8452' },
-  { name: 'DP', value: 70, color: '#fac858' },
+  { name: 'Greedy', value: 39, color: '#3ba272' },
+  { name: 'Graph', value: 50, color: '#7F00FF' },
+  { name: 'BFS/DFS', value: 105, color: '#fc8452' },
+  { name: 'DP', value: 81, color: '#fac858' },
 ];
 
 const platformStats = [
-  { platform: 'LeetCode', problems: 362, rank: '333,157', rating: '1,518' },
+  { platform: 'LeetCode', problems: 410, rank: '333,157', rating: '1,518' },
   { platform: 'HackerRank', problems: 103, Hackos: '873', rating: '5⭐' },
   { platform: 'CodeChef', problems: 82, rank: '1,164', rating: '1126' },
-  { platform: 'GeeksForGeeks', problems: 89, rank: '411', rating: '-' },
+  { platform: 'GeeksForGeeks', problems: 103, rank: '411', rating: '-' },
   // { platform: 'CodeForces', problems: 7,   rank: '12,065', rating: '611' },
-  { platform: 'Code Studio', problems: 57, rank: 'Weekly - 3rd', rating: '-' }
+  { platform: 'Code Studio', problems: 59, rank: 'Weekly - 3rd', rating: '-' }
 ];
 
 const commonTopics = [

@@ -16,8 +16,7 @@ const HeroSection = () => {
             </div>
           </div>
           <p className="text-lg text-foreground/80 mb-8 max-w-2xl animate-fade-in" style={{ animationDelay: "0.4s" }}>
-            AWS Certified Cloud Practitioner and fourth-year IT student specializing in cloud solutions, enterprise applications, and innovative software development.
-          </p>
+            AWS Certified Cloud Practitioner and final-year IT student specializing in backend development, system design, and scalable cloud-based application engineering.          </p>
         </div>
 
         <div className="mt-8 lg:mt-0 flex flex-col items-center animate-fade-in" style={{ animationDelay: "0.6s" }}>

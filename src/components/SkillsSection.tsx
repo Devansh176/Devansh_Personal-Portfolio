@@ -7,16 +7,8 @@ const skillCategories = [
     description: "Languages I use for development and problem solving",
     skills: [
       { name: "Java", level: "Advanced" },
-      { name: "Dart", level: "Intermediate" },
+      { name: "C", level: "Intermediate" },
       { name: "Python", level: "Intermediate" },
-    ]
-  },
-  {
-    title: "Mobile Development",
-    description: "Tools and frameworks I use to build Android apps",
-    skills: [
-      { name: "Flutter", level: "Intermediate" },
-      { name: "Android SDK", level: "Intermediate" },
     ]
   },
   {
@@ -52,6 +44,14 @@ const skillCategories = [
       { name: "Linux", level: "Intermediate" },
       { name: "Operating Systems", level: "Intermediate" },
       { name: "Computer Networks", level: "Intermediate" },
+    ]
+  },
+  {
+    title: "Mobile Development",
+    description: "Tools and frameworks I use to build Android apps",
+    skills: [
+      { name: "Flutter", level: "Intermediate" },
+      { name: "Android SDK", level: "Intermediate" },
     ]
   },
   {
