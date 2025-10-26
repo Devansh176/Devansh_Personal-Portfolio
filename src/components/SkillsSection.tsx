@@ -79,12 +79,12 @@ const SkillsSection = () => {
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {skillCategories.map((category, index) => (
-            <Card 
-              key={index} 
-              className="overflow-hidden border border-border/50 backdrop-blur-sm bg-card/30 animate-fade-in hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
+            {skillCategories.map((category, index) => (
+              <Card 
+                key={index} 
+                className="overflow-hidden border border-border/50 backdrop-blur-sm bg-card/30 animate-fade-in hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 will-change-transform"
+                style={{ animationDelay: `${index * 0.1}s`, transform: 'translateZ(0)' }}
+              >
               <CardHeader className="bg-primary/5 border-b border-border/30">
                 <CardTitle>{category.title}</CardTitle>
                 <CardDescription>{category.description}</CardDescription>
@@ -95,7 +95,7 @@ const SkillsSection = () => {
                     <div key={skill.name} className="relative group">
                       <Badge 
                         variant="secondary" 
-                        className="py-1.5 rounded-full transition-all duration-200 hover:bg-primary/20 cursor-default"
+                        className="py-1.5 rounded-full transition-all duration-200 hover:bg-primary/20 cursor-default will-change-transform"
                       >
                         {skill.name}
                       </Badge>

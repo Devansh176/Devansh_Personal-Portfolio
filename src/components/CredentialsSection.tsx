@@ -13,7 +13,7 @@ const CredentialsSection = () => {
         </p>
 
         <div className="max-w-4xl mx-auto">
-          <Card className="border-2 border-primary/20 bg-gradient-to-br from-background to-primary/5 shadow-xl hover:shadow-2xl transition-all duration-300">
+          <Card className="border-2 border-primary/20 bg-gradient-to-br from-background to-primary/5 shadow-xl hover:shadow-2xl transition-all duration-300 will-change-transform" style={{ transform: 'translateZ(0)' }}>
             <CardHeader className="text-center pb-4">
               <div className="flex justify-center mb-4">
                 <div className="relative">
@@ -21,6 +21,8 @@ const CredentialsSection = () => {
                     src="/my-aws-certificate.png" 
                     alt="AWS Certified Cloud Practitioner Certificate - Devansh Dhopte" 
                     className="max-w-md w-full h-auto rounded-lg shadow-lg"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute -top-2 -right-2 bg-primary text-white rounded-full p-2">
                     <Award className="h-6 w-6" />

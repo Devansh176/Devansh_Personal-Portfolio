@@ -125,12 +125,14 @@ const ProjectsSection = () => {
             <TabsContent key={category} value={category} className="mt-0">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredProjects.map((project) => (
-                  <Card key={project.id} className="overflow-hidden border border-border/50 bg-card/60 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/10">
+                  <Card key={project.id} className="overflow-hidden border border-border/50 bg-card/60 backdrop-blur-sm transition-all duration-300 will-change-transform hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/10">
                     <div className="aspect-video overflow-hidden">
                       <img 
                         src={project.image} 
                         alt={project.title} 
-                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                        className="w-full h-full object-cover transition-transform duration-500 will-change-transform hover:scale-110"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
                     <CardHeader>

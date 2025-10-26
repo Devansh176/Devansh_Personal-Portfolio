@@ -53,7 +53,7 @@ const VirtualInternshipsSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {internships.map((internship, index) => (
-            <Card key={index} className="card-hover animate-fade-in" style={{ animationDelay: `${index * 0.15}s` }}>
+            <Card key={index} className="card-hover animate-fade-in will-change-transform" style={{ animationDelay: `${index * 0.15}s`, transform: 'translateZ(0)' }}>
               <CardHeader className="pb-2">
                 <div className="flex justify-between items-start">
                   <div>

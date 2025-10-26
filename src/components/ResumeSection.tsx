@@ -12,7 +12,7 @@ const ResumeSection = () => {
         </p>
         
         <div className="max-w-3xl mx-auto">
-          <Card className="text-center shadow-lg hover:shadow-xl transition-all duration-300 mb-12 bg-card/70 backdrop-blur-sm border border-border/50">
+          <Card className="text-center shadow-lg hover:shadow-xl transition-all duration-300 mb-12 bg-card/70 backdrop-blur-sm border border-border/50 will-change-transform" style={{ transform: 'translateZ(0)' }}>
             <CardHeader>
               <CardTitle>My Professional Resume</CardTitle>
               <CardDescription>
@@ -32,7 +32,7 @@ const ResumeSection = () => {
           </Card>
           
           <div className="mt-12">
-            <Card className="card-hover shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-card/70 backdrop-blur-sm border border-border/50">
+            <Card className="card-hover shadow-lg hover:shadow-xl transition-all duration-300 will-change-transform hover:-translate-y-2 bg-card/70 backdrop-blur-sm border border-border/50" style={{ transform: 'translateZ(0)' }}>
               <CardHeader className="border-b border-border/30 bg-primary/5">
                 <CardTitle className="text-center">Education</CardTitle>
               </CardHeader>

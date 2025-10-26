@@ -33,13 +33,14 @@ const ThemeToggle = () => {
       variant="outline"
       size="icon"
       onClick={toggleTheme}
-      className="fixed bottom-6 left-6 z-50 rounded-full shadow-lg bg-background/80 backdrop-blur-sm border-border hover:shadow-xl transition-all duration-300"
+      className="fixed bottom-6 left-6 z-50 rounded-full shadow-lg bg-background/80 backdrop-blur-sm border-border hover:shadow-xl transition-all duration-300 will-change-transform"
       aria-label="Toggle theme"
+      style={{ transform: 'translateZ(0)' }}
     >
       {isDark ? (
-        <Sun className="h-5 w-5 text-yellow-500 animate-fade-in" />
+        <Sun className="h-5 w-5 text-yellow-500" />
       ) : (
-        <Moon className="h-5 w-5 text-primary animate-fade-in" />
+        <Moon className="h-5 w-5 text-primary" />
       )}
     </Button>
   );

@@ -20,11 +20,12 @@ const HeroSection = () => {
         </div>
 
         <div className="mt-8 lg:mt-0 flex flex-col items-center animate-fade-in" style={{ animationDelay: "0.6s" }}>
-          <Avatar className="h-60 w-60 border-4 border-primary/20 brand-shadow hover:glow-effect transition-all duration-300 hover:scale-105 overflow-hidden">
+          <Avatar className="h-60 w-60 border-4 border-primary/20 brand-shadow hover:glow-effect transition-all duration-300 will-change-transform hover:scale-105 overflow-hidden">
             <AvatarImage
               src="ProfilePhoto.jpeg"
               alt="Devansh P. Dhopte"
               className="object-cover object-[50%_30%] w-full h-full"
+              loading="eager"
             />
             <AvatarFallback>DP</AvatarFallback>
           </Avatar>

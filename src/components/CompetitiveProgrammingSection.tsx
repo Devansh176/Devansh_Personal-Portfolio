@@ -88,7 +88,7 @@ const CompetitiveProgrammingSection = () => {
 
         {/* Enhanced Pie Chart Card */}
         <div className="flex justify-center mb-12">
-          <Card className="overflow-hidden border border-border/50 backdrop-blur-sm bg-card/40 w-full max-w-4xl shadow-lg">
+          <Card className="overflow-hidden border border-border/50 backdrop-blur-sm bg-card/40 w-full max-w-4xl shadow-lg will-change-transform" style={{ transform: 'translateZ(0)' }}>
             <CardHeader className="bg-gradient-to-r from-primary/10 via-primary/5 to-transparent border-b border-border/30 pb-6">
               <div className="text-center">
                 <CardTitle className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
@@ -190,7 +190,8 @@ const CompetitiveProgrammingSection = () => {
               {platformStats.map((stat, index) => (
                 <Card 
                   key={index} 
-                  className="bg-background/50 backdrop-blur-sm border border-border/30 hover:shadow-md transition-all duration-300 hover:-translate-y-1"
+                  className="bg-background/50 backdrop-blur-sm border border-border/30 hover:shadow-md transition-all duration-300 will-change-transform hover:-translate-y-1"
+                  style={{ transform: 'translateZ(0)' }}
                 >
                   <CardHeader className="pb-2">
                     <CardTitle className="text-center text-lg">{stat.platform}</CardTitle>

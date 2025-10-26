@@ -110,10 +110,24 @@
 
   body {
     @apply bg-background text-foreground font-sans transition-colors duration-300;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading;
+  }
+
+  /* Performance optimizations */
+  img {
+    content-visibility: auto;
+  }
+
+  /* Smooth scrolling with reduced motion support */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
   }
 }
 
@@ -128,10 +142,13 @@
 
   .card-hover {
     @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+    will-change: transform;
+    transform: translateZ(0);
   }
 
   .brand-card {
     @apply bg-gradient-to-br from-card to-primary/5 border border-primary/20 shadow-lg hover:shadow-xl transition-all duration-300;
+    transform: translateZ(0);
   }
 
   .brand-gradient {
@@ -151,35 +168,48 @@
   }
 }
 
-/* Enhanced animations */
+/* Enhanced animations with GPU acceleration */
 @layer utilities {
   .animate-fade-in {
     @apply opacity-0;
     animation: fadeIn 0.5s ease-out forwards;
+    will-change: opacity;
   }
   
   .animate-slide-in-right {
     @apply opacity-0 translate-x-10;
     animation: slideInRight 0.6s ease-out forwards;
+    will-change: transform, opacity;
   }
   
   .animate-slide-in-left {
     @apply opacity-0 -translate-x-10;
     animation: slideInLeft 0.6s ease-out forwards;
+    will-change: transform, opacity;
   }
   
   .animate-slide-in-up {
     @apply opacity-0 translate-y-10;
     animation: slideInUp 0.6s ease-out forwards;
+    will-change: transform, opacity;
   }
   
   .animate-scale-in {
     @apply opacity-0 scale-95;
     animation: scaleIn 0.5s ease-out forwards;
+    will-change: transform, opacity;
   }
   
   .animate-bounce-in {
     animation: bounceIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    will-change: transform;
+  }
+
+  /* GPU-accelerated transforms */
+  .gpu-accelerated {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
   }
 }
 
@@ -191,56 +221,56 @@
 @keyframes slideInRight {
   from { 
     opacity: 0; 
-    transform: translateX(20px);
+    transform: translate3d(20px, 0, 0);
   }
   to { 
     opacity: 1; 
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes slideInLeft {
   from { 
     opacity: 0; 
-    transform: translateX(-20px);
+    transform: translate3d(-20px, 0, 0);
   }
   to { 
     opacity: 1; 
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes slideInUp {
   from { 
     opacity: 0; 
-    transform: translateY(20px);
+    transform: translate3d(0, 20px, 0);
   }
   to { 
     opacity: 1; 
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes scaleIn {
   from { 
     opacity: 0; 
-    transform: scale(0.95);
+    transform: scale3d(0.95, 0.95, 1);
   }
   to { 
     opacity: 1; 
-    transform: scale(1);
+    transform: scale3d(1, 1, 1);
   }
 }
 
 @keyframes bounceIn {
   0% {
     opacity: 0;
-    transform: scale(0.3);
+    transform: scale3d(0.3, 0.3, 1);
   }
   50% {
     opacity: 1;
-    transform: scale(1.05);
+    transform: scale3d(1.05, 1.05, 1);
   }
-  70% { transform: scale(0.9); }
-  100% { transform: scale(1); }
+  70% { transform: scale3d(0.9, 0.9, 1); }
+  100% { transform: scale3d(1, 1, 1); }
 }

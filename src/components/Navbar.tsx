@@ -1,9 +1,8 @@
 
-import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
+import { useState } from "react";
 import { cn } from "@/lib/utils";
-import { Menu, Code, Github, Linkedin, Mail, ExternalLink, BookOpen } from "lucide-react";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Menu, Github, Linkedin, Mail, ExternalLink, BookOpen } from "lucide-react";
+import { useThrottledScroll } from "@/hooks/useThrottledScroll";
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -16,21 +15,8 @@ const navLinks = [
 ];
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const isScrolled = useThrottledScroll(10, 100);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-    
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
@@ -43,18 +29,21 @@ const Navbar = () => {
   return (
     <header 
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 will-change-transform",
         isScrolled 
           ? "bg-background/90 dark:bg-background/80 backdrop-blur-md shadow-sm py-3" 
           : "bg-transparent py-5"
       )}
+      style={{ transform: 'translateZ(0)' }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <a href="#home" className="flex items-center gap-3">
             <img 
               src="cartoon.jpg"
+              alt="Devansh Dhopte"
               className="w-20 h-20 rounded-full object-cover border border-primary"
+              loading="eager"
             />
           </a>
 
@@ -69,7 +58,7 @@ const Navbar = () => {
                   e.preventDefault();
                   scrollToSection(link.href);
                 }}
-                className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors hover:scale-105 transform duration-200"
+                className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors will-change-transform hover:scale-105 transform duration-200"
               >
                 {link.name}
               </a>
